@@ -10,6 +10,13 @@
 		F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73182B07D32200FC13B1 /* CoreModule.swift */; };
 		F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731A2B07D35900FC13B1 /* BaseModule.swift */; };
 		F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */; };
+		F37C73222B07D6E000FC13B1 /* ClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73212B07D6E000FC13B1 /* ClosureUseCase.swift */; };
+		F37C73242B07D74B00FC13B1 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73232B07D74B00FC13B1 /* Reusable.swift */; };
+		F37C73262B07D77E00FC13B1 /* CaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73252B07D77E00FC13B1 /* CaseResult.swift */; };
+		F37C73282B07D80700FC13B1 /* AnyClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73272B07D80700FC13B1 /* AnyClosureUseCase.swift */; };
+		F37C732A2B07D8B600FC13B1 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73292B07D8B600FC13B1 /* UseCase.swift */; };
+		F37C732C2B07D8D400FC13B1 /* AnyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C732B2B07D8D400FC13B1 /* AnyUseCase.swift */; };
+		F37C732F2B07D96C00FC13B1 /* CoreModule+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C732E2B07D96C00FC13B1 /* CoreModule+Domain.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -65,6 +72,13 @@
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
+		F37C73212B07D6E000FC13B1 /* ClosureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureUseCase.swift; sourceTree = "<group>"; };
+		F37C73232B07D74B00FC13B1 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		F37C73252B07D77E00FC13B1 /* CaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseResult.swift; sourceTree = "<group>"; };
+		F37C73272B07D80700FC13B1 /* AnyClosureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyClosureUseCase.swift; sourceTree = "<group>"; };
+		F37C73292B07D8B600FC13B1 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		F37C732B2B07D8D400FC13B1 /* AnyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUseCase.swift; sourceTree = "<group>"; };
+		F37C732E2B07D96C00FC13B1 /* CoreModule+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Domain.swift"; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +146,34 @@
 			isa = PBXGroup;
 			children = (
 				F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F37C731F2B07D64900FC13B1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F37C732D2B07D96300FC13B1 /* DI */,
+				F37C73202B07D6D900FC13B1 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F37C73202B07D6D900FC13B1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F37C73272B07D80700FC13B1 /* AnyClosureUseCase.swift */,
+				F37C732B2B07D8D400FC13B1 /* AnyUseCase.swift */,
+				F37C73212B07D6E000FC13B1 /* ClosureUseCase.swift */,
+				F37C73292B07D8B600FC13B1 /* UseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F37C732D2B07D96300FC13B1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F37C732E2B07D96C00FC13B1 /* CoreModule+Domain.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -208,8 +250,10 @@
 			isa = PBXGroup;
 			children = (
 				F3C7665A2B0795AF002DDAFC /* DI */,
+				F37C731F2B07D64900FC13B1 /* Domain */,
 				F3C766152B072377002DDAFC /* Extensions */,
 				F3C766332B07342A002DDAFC /* Presentation */,
+				F3C7664C2B073D4D002DDAFC /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -255,7 +299,6 @@
 			children = (
 				F37C731C2B07D47F00FC13B1 /* DI */,
 				F3C766532B07401C002DDAFC /* Entity */,
-				F3C7664C2B073D4D002DDAFC /* Utils */,
 				F3C766342B073439002DDAFC /* View */,
 				F3C766372B073463002DDAFC /* ViewModel */,
 				F3C766452B0738FC002DDAFC /* Wrapper */,
@@ -291,9 +334,10 @@
 		F3C7664C2B073D4D002DDAFC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F3C766512B073F99002DDAFC /* Coordinator.swift */,
+				F37C73252B07D77E00FC13B1 /* CaseResult.swift */,
 				F3C7664D2B073D7B002DDAFC /* NotificationCenterWrapper.swift */,
 				F3C7664F2B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift */,
+				F37C73232B07D74B00FC13B1 /* Reusable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +345,7 @@
 		F3C766532B07401C002DDAFC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				F3C766512B073F99002DDAFC /* Coordinator.swift */,
 				F3C766562B0740BE002DDAFC /* CoordinatorArgs.swift */,
 				F3C766582B07413B002DDAFC /* CoordinatorType.swift */,
 				F3C766542B074061002DDAFC /* PresentArgs.swift */,
@@ -484,23 +529,30 @@
 				F3C766492B073984002DDAFC /* PublishObservable.swift in Sources */,
 				F3C766572B0740BE002DDAFC /* CoordinatorArgs.swift in Sources */,
 				F3C766522B073F99002DDAFC /* Coordinator.swift in Sources */,
+				F37C73242B07D74B00FC13B1 /* Reusable.swift in Sources */,
+				F37C732F2B07D96C00FC13B1 /* CoreModule+Domain.swift in Sources */,
 				F3C7665C2B0795BF002DDAFC /* MainControllerProvider.swift in Sources */,
 				F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */,
+				F37C732A2B07D8B600FC13B1 /* UseCase.swift in Sources */,
 				F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */,
 				F3C766552B074061002DDAFC /* PresentArgs.swift in Sources */,
 				F3C766592B07413B002DDAFC /* CoordinatorType.swift in Sources */,
+				F37C73222B07D6E000FC13B1 /* ClosureUseCase.swift in Sources */,
 				F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */,
 				F3C7661C2B07251B002DDAFC /* SplashViewController.swift in Sources */,
 				F3C766172B072456002DDAFC /* String+Extension.swift in Sources */,
+				F37C73262B07D77E00FC13B1 /* CaseResult.swift in Sources */,
 				F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */,
 				F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */,
 				F3C766392B073472002DDAFC /* BaseViewModel.swift in Sources */,
+				F37C73282B07D80700FC13B1 /* AnyClosureUseCase.swift in Sources */,
 				F3C766612B079D13002DDAFC /* SplashModule.swift in Sources */,
 				F3C766362B073458002DDAFC /* BaseViewController.swift in Sources */,
 				F3C766642B07C92C002DDAFC /* SplashViewModel.swift in Sources */,
 				F3C766502B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift in Sources */,
 				F3C7665E2B079731002DDAFC /* Injection.swift in Sources */,
 				F3C7664E2B073D7B002DDAFC /* NotificationCenterWrapper.swift in Sources */,
+				F37C732C2B07D8D400FC13B1 /* AnyUseCase.swift in Sources */,
 				F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
