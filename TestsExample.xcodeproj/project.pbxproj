@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73182B07D32200FC13B1 /* CoreModule.swift */; };
+		F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731A2B07D35900FC13B1 /* BaseModule.swift */; };
+		F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -17,6 +20,28 @@
 		F3C766062B071AB5002DDAFC /* TestsExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766052B071AB5002DDAFC /* TestsExampleUITestsLaunchTests.swift */; };
 		F3C766172B072456002DDAFC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766162B072456002DDAFC /* String+Extension.swift */; };
 		F3C7661C2B07251B002DDAFC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7661B2B07251B002DDAFC /* SplashViewController.swift */; };
+		F3C7662D2B073106002DDAFC /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F3C7662C2B073106002DDAFC /* SDWebImage */; };
+		F3C766302B073118002DDAFC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = F3C7662F2B073118002DDAFC /* Swinject */; };
+		F3C766322B073156002DDAFC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766312B073156002DDAFC /* UIImageView+Extension.swift */; };
+		F3C766362B073458002DDAFC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766352B073458002DDAFC /* BaseViewController.swift */; };
+		F3C766392B073472002DDAFC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766382B073472002DDAFC /* BaseViewModel.swift */; };
+		F3C7663C2B07350E002DDAFC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F3C7663B2B07350E002DDAFC /* RxBlocking */; };
+		F3C7663E2B07350E002DDAFC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F3C7663D2B07350E002DDAFC /* RxCocoa */; };
+		F3C766402B07350E002DDAFC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F3C7663F2B07350E002DDAFC /* RxRelay */; };
+		F3C766422B07350E002DDAFC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3C766412B07350E002DDAFC /* RxSwift */; };
+		F3C766492B073984002DDAFC /* PublishObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766482B073984002DDAFC /* PublishObservable.swift */; };
+		F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7664A2B073A78002DDAFC /* BehaviorObservable.swift */; };
+		F3C7664E2B073D7B002DDAFC /* NotificationCenterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7664D2B073D7B002DDAFC /* NotificationCenterWrapper.swift */; };
+		F3C766502B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7664F2B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift */; };
+		F3C766522B073F99002DDAFC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766512B073F99002DDAFC /* Coordinator.swift */; };
+		F3C766552B074061002DDAFC /* PresentArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766542B074061002DDAFC /* PresentArgs.swift */; };
+		F3C766572B0740BE002DDAFC /* CoordinatorArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766562B0740BE002DDAFC /* CoordinatorArgs.swift */; };
+		F3C766592B07413B002DDAFC /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766582B07413B002DDAFC /* CoordinatorType.swift */; };
+		F3C7665C2B0795BF002DDAFC /* MainControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7665B2B0795BF002DDAFC /* MainControllerProvider.swift */; };
+		F3C7665E2B079731002DDAFC /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7665D2B079731002DDAFC /* Injection.swift */; };
+		F3C766612B079D13002DDAFC /* SplashModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766602B079D13002DDAFC /* SplashModule.swift */; };
+		F3C766642B07C92C002DDAFC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766632B07C92C002DDAFC /* SplashViewModel.swift */; };
+		F3C766682B07CA28002DDAFC /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
+		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
+		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +79,22 @@
 		F3C766052B071AB5002DDAFC /* TestsExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3C766162B072456002DDAFC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F3C7661B2B07251B002DDAFC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F3C766312B073156002DDAFC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		F3C766352B073458002DDAFC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F3C766382B073472002DDAFC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F3C766482B073984002DDAFC /* PublishObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishObservable.swift; sourceTree = "<group>"; };
+		F3C7664A2B073A78002DDAFC /* BehaviorObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorObservable.swift; sourceTree = "<group>"; };
+		F3C7664D2B073D7B002DDAFC /* NotificationCenterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterWrapper.swift; sourceTree = "<group>"; };
+		F3C7664F2B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterWrapperImpl.swift; sourceTree = "<group>"; };
+		F3C766512B073F99002DDAFC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F3C766542B074061002DDAFC /* PresentArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentArgs.swift; sourceTree = "<group>"; };
+		F3C766562B0740BE002DDAFC /* CoordinatorArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorArgs.swift; sourceTree = "<group>"; };
+		F3C766582B07413B002DDAFC /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		F3C7665B2B0795BF002DDAFC /* MainControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerProvider.swift; sourceTree = "<group>"; };
+		F3C7665D2B079731002DDAFC /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		F3C766602B079D13002DDAFC /* SplashModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModule.swift; sourceTree = "<group>"; };
+		F3C766632B07C92C002DDAFC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +102,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C766422B07350E002DDAFC /* RxSwift in Frameworks */,
+				F3C766402B07350E002DDAFC /* RxRelay in Frameworks */,
+				F3C7662D2B073106002DDAFC /* SDWebImage in Frameworks */,
+				F3C7663C2B07350E002DDAFC /* RxBlocking in Frameworks */,
+				F3C7663E2B07350E002DDAFC /* RxCocoa in Frameworks */,
+				F3C766302B073118002DDAFC /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F37C731C2B07D47F00FC13B1 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		F3C765D32B071AB3002DDAFC = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +187,8 @@
 		F3C766122B072258002DDAFC /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
-				F3C766182B0724FB002DDAFC /* Splash */,
 				F3C766142B07236C002DDAFC /* Core */,
+				F3C766182B0724FB002DDAFC /* Splash */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -149,7 +207,9 @@
 		F3C766142B07236C002DDAFC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F3C7665A2B0795AF002DDAFC /* DI */,
 				F3C766152B072377002DDAFC /* Extensions */,
+				F3C766332B07342A002DDAFC /* Presentation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -157,7 +217,9 @@
 		F3C766152B072377002DDAFC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */,
 				F3C766162B072456002DDAFC /* String+Extension.swift */,
+				F3C766312B073156002DDAFC /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,6 +227,7 @@
 		F3C766182B0724FB002DDAFC /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				F3C7665F2B079D06002DDAFC /* DI */,
 				F3C766192B072503002DDAFC /* Presentation */,
 			);
 			path = Splash;
@@ -174,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				F3C7661A2B07250A002DDAFC /* View */,
+				F3C766622B07C91C002DDAFC /* ViewModel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -184,6 +248,91 @@
 				F3C7661B2B07251B002DDAFC /* SplashViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F3C766332B07342A002DDAFC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F37C731C2B07D47F00FC13B1 /* DI */,
+				F3C766532B07401C002DDAFC /* Entity */,
+				F3C7664C2B073D4D002DDAFC /* Utils */,
+				F3C766342B073439002DDAFC /* View */,
+				F3C766372B073463002DDAFC /* ViewModel */,
+				F3C766452B0738FC002DDAFC /* Wrapper */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3C766342B073439002DDAFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3C766352B073458002DDAFC /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3C766372B073463002DDAFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3C766382B073472002DDAFC /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3C766452B0738FC002DDAFC /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7664A2B073A78002DDAFC /* BehaviorObservable.swift */,
+				F3C766482B073984002DDAFC /* PublishObservable.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		F3C7664C2B073D4D002DDAFC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F3C766512B073F99002DDAFC /* Coordinator.swift */,
+				F3C7664D2B073D7B002DDAFC /* NotificationCenterWrapper.swift */,
+				F3C7664F2B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F3C766532B07401C002DDAFC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F3C766562B0740BE002DDAFC /* CoordinatorArgs.swift */,
+				F3C766582B07413B002DDAFC /* CoordinatorType.swift */,
+				F3C766542B074061002DDAFC /* PresentArgs.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F3C7665A2B0795AF002DDAFC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F37C731A2B07D35900FC13B1 /* BaseModule.swift */,
+				F37C73182B07D32200FC13B1 /* CoreModule.swift */,
+				F3C7665D2B079731002DDAFC /* Injection.swift */,
+				F3C7665B2B0795BF002DDAFC /* MainControllerProvider.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F3C7665F2B079D06002DDAFC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F3C766602B079D13002DDAFC /* SplashModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F3C766622B07C91C002DDAFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3C766632B07C92C002DDAFC /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +351,14 @@
 			dependencies = (
 			);
 			name = TestsExample;
+			packageProductDependencies = (
+				F3C7662C2B073106002DDAFC /* SDWebImage */,
+				F3C7662F2B073118002DDAFC /* Swinject */,
+				F3C7663B2B07350E002DDAFC /* RxBlocking */,
+				F3C7663D2B07350E002DDAFC /* RxCocoa */,
+				F3C7663F2B07350E002DDAFC /* RxRelay */,
+				F3C766412B07350E002DDAFC /* RxSwift */,
+			);
 			productName = TestsExample;
 			productReference = F3C765DC2B071AB3002DDAFC /* TestsExample.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +431,11 @@
 				Base,
 			);
 			mainGroup = F3C765D32B071AB3002DDAFC;
+			packageReferences = (
+				F3C7662B2B073106002DDAFC /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				F3C7662E2B073118002DDAFC /* XCRemoteSwiftPackageReference "Swinject" */,
+				F3C7663A2B07350E002DDAFC /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = F3C765DD2B071AB3002DDAFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -316,10 +478,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */,
+				F3C766322B073156002DDAFC /* UIImageView+Extension.swift in Sources */,
+				F3C766682B07CA28002DDAFC /* Resolver+Extension.swift in Sources */,
+				F3C766492B073984002DDAFC /* PublishObservable.swift in Sources */,
+				F3C766572B0740BE002DDAFC /* CoordinatorArgs.swift in Sources */,
+				F3C766522B073F99002DDAFC /* Coordinator.swift in Sources */,
+				F3C7665C2B0795BF002DDAFC /* MainControllerProvider.swift in Sources */,
 				F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */,
+				F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */,
+				F3C766552B074061002DDAFC /* PresentArgs.swift in Sources */,
+				F3C766592B07413B002DDAFC /* CoordinatorType.swift in Sources */,
 				F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */,
 				F3C7661C2B07251B002DDAFC /* SplashViewController.swift in Sources */,
 				F3C766172B072456002DDAFC /* String+Extension.swift in Sources */,
+				F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */,
+				F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */,
+				F3C766392B073472002DDAFC /* BaseViewModel.swift in Sources */,
+				F3C766612B079D13002DDAFC /* SplashModule.swift in Sources */,
+				F3C766362B073458002DDAFC /* BaseViewController.swift in Sources */,
+				F3C766642B07C92C002DDAFC /* SplashViewModel.swift in Sources */,
+				F3C766502B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift in Sources */,
+				F3C7665E2B079731002DDAFC /* Injection.swift in Sources */,
+				F3C7664E2B073D7B002DDAFC /* NotificationCenterWrapper.swift in Sources */,
 				F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +831,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3C7662B2B073106002DDAFC /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = exactVersion;
+				version = 5.18.5;
+			};
+		};
+		F3C7662E2B073118002DDAFC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.4;
+			};
+		};
+		F3C7663A2B07350E002DDAFC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3C7662C2B073106002DDAFC /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7662B2B073106002DDAFC /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F3C7662F2B073118002DDAFC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7662E2B073118002DDAFC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		F3C7663B2B07350E002DDAFC /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7663A2B07350E002DDAFC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		F3C7663D2B07350E002DDAFC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7663A2B07350E002DDAFC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F3C7663F2B07350E002DDAFC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7663A2B07350E002DDAFC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F3C766412B07350E002DDAFC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7663A2B07350E002DDAFC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */ = {
