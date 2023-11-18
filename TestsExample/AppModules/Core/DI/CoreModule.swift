@@ -9,6 +9,7 @@ import Foundation
 
 final class CoreModule: BaseModule {
     func inject() {
+        dataInject()
         domainInject()
         presentationInject()
     }
