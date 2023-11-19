@@ -9,11 +9,23 @@ import Foundation
 
 final class ProductModule: BaseModule {
     func inject() {
+        container.register(ProductDomainMapper.self) { _ in
+            ProductDomainMapperImpl()
+        }
+        container.register(
+            FetchProductsUseCase.Alias.self,
+            name: FetchProductsUseCase.identifier
+        ) { _ in
+            .init(FetchProductsUseCase())
+        }
         container.register(ProductPresentationMapper.self) { _ in
             ProductPresentationMapperImpl()
         }
         container.register(ProductsViewModel.self) { resolver in
-            .init()
+            .init(fetchProductsUseCase: resolver.load(
+                FetchProductsUseCase.Alias.self,
+                FetchProductsUseCase.identifier)
+            )
         }
         container.register(ProductsViewController.self) { resolver in
             .init(

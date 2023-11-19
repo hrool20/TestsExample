@@ -26,6 +26,7 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
         tableView.separatorStyle = .singleLine
         return tableView
     }()
+    private var items: [UiProductItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +73,7 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
     // MARK: - UITableViewDelegate && UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        .zero
+        items?.count ?? .zero
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

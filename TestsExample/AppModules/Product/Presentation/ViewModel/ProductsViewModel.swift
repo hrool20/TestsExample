@@ -8,6 +8,12 @@
 import Foundation
 
 final class ProductsViewModel: BaseViewModel {
+    private let fetchProductsUseCase: FetchProductsUseCase.Alias
+
+    init(fetchProductsUseCase: FetchProductsUseCase.Alias) {
+        self.fetchProductsUseCase = fetchProductsUseCase
+    }
+
     func onViewDidLoad() {
     }
 }

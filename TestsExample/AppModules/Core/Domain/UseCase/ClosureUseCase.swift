@@ -12,8 +12,22 @@ protocol ClosureUseCase: Reusable {
     associatedtype ResultType
     associatedtype ErrorType
 
-    func execute(_ parameters: RequestType, _ onCompletion: @escaping (CaseResult<ResultType, ErrorType>) -> Void)
+    func execute(
+        _ parameters: RequestType,
+        _ onCompletion: @escaping (CaseResult<ResultType, ErrorType>) -> Void)
 }
 extension ClosureUseCase {
     typealias Alias = AnyClosureUseCase<RequestType, ResultType, ErrorType>
+
+    func execute(
+        _ onCompletion: @escaping (CaseResult<ResultType, ErrorType>) -> Void
+    ) where RequestType == Void {
+        execute((), onCompletion)
+    }
+
+    func execute(
+        _ onCompletion: @escaping (CaseResult<ResultType, ErrorType>) -> Void
+    ) where RequestType == Optional<Void> {
+        execute(nil, onCompletion)
+    }
 }

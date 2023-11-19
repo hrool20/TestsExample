@@ -41,6 +41,9 @@
 		F3B59A562B09D5FD00E421BD /* ProductPresentationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A552B09D5FD00E421BD /* ProductPresentationMapper.swift */; };
 		F3B59A582B09D61B00E421BD /* UiProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A572B09D61B00E421BD /* UiProductItem.swift */; };
 		F3B59A5A2B09D65800E421BD /* ProductPresentationMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A592B09D65800E421BD /* ProductPresentationMapperImpl.swift */; };
+		F3B59A5F2B09D95600E421BD /* FetchProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A5E2B09D95600E421BD /* FetchProductsUseCase.swift */; };
+		F3B59A622B09DDE600E421BD /* ProductDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A612B09DDE600E421BD /* ProductDomainMapper.swift */; };
+		F3B59A642B09DDFC00E421BD /* ProductDomainMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A632B09DDFC00E421BD /* ProductDomainMapperImpl.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -127,6 +130,9 @@
 		F3B59A552B09D5FD00E421BD /* ProductPresentationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentationMapper.swift; sourceTree = "<group>"; };
 		F3B59A572B09D61B00E421BD /* UiProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiProductItem.swift; sourceTree = "<group>"; };
 		F3B59A592B09D65800E421BD /* ProductPresentationMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentationMapperImpl.swift; sourceTree = "<group>"; };
+		F3B59A5E2B09D95600E421BD /* FetchProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductsUseCase.swift; sourceTree = "<group>"; };
+		F3B59A612B09DDE600E421BD /* ProductDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDomainMapper.swift; sourceTree = "<group>"; };
+		F3B59A632B09DDFC00E421BD /* ProductDomainMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDomainMapperImpl.swift; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B59A4E2B09D29F00E421BD /* DI */,
+				F3B59A5C2B09D93B00E421BD /* Domain */,
 				F3B59A472B09CEDF00E421BD /* Presentation */,
 			);
 			path = Product;
@@ -363,6 +370,32 @@
 			children = (
 				F3B59A552B09D5FD00E421BD /* ProductPresentationMapper.swift */,
 				F3B59A592B09D65800E421BD /* ProductPresentationMapperImpl.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		F3B59A5C2B09D93B00E421BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A602B09DDDB00E421BD /* Mapper */,
+				F3B59A5D2B09D94700E421BD /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F3B59A5D2B09D94700E421BD /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A5E2B09D95600E421BD /* FetchProductsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F3B59A602B09DDDB00E421BD /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A612B09DDE600E421BD /* ProductDomainMapper.swift */,
+				F3B59A632B09DDFC00E421BD /* ProductDomainMapperImpl.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -751,6 +784,7 @@
 				F3B59A4D2B09CFF200E421BD /* ProductsViewController.swift in Sources */,
 				F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */,
 				F3C7661C2B07251B002DDAFC /* SplashViewController.swift in Sources */,
+				F3B59A5F2B09D95600E421BD /* FetchProductsUseCase.swift in Sources */,
 				F3C766172B072456002DDAFC /* String+Extension.swift in Sources */,
 				F37C73262B07D77E00FC13B1 /* CaseResult.swift in Sources */,
 				F37C73412B09730B00FC13B1 /* UITableView+Extension.swift in Sources */,
@@ -759,8 +793,10 @@
 				F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */,
 				F3B59A4B2B09CEFB00E421BD /* ProductsViewModel.swift in Sources */,
 				F3C766392B073472002DDAFC /* BaseViewModel.swift in Sources */,
+				F3B59A622B09DDE600E421BD /* ProductDomainMapper.swift in Sources */,
 				F37C73282B07D80700FC13B1 /* AnyClosureUseCase.swift in Sources */,
 				F37C73382B092D3E00FC13B1 /* KeychainLocalStorage.swift in Sources */,
+				F3B59A642B09DDFC00E421BD /* ProductDomainMapperImpl.swift in Sources */,
 				F3B59A562B09D5FD00E421BD /* ProductPresentationMapper.swift in Sources */,
 				F3B59A502B09D2CA00E421BD /* ProductModule.swift in Sources */,
 				F3B59A452B09CADA00E421BD /* UIApplication+Extension.swift in Sources */,
