@@ -23,6 +23,10 @@
 		F37C733A2B0932F500FC13B1 /* UserDefaultsLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73392B0932F500FC13B1 /* UserDefaultsLocalStorage.swift */; };
 		F37C733D2B09379700FC13B1 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C733C2B09379700FC13B1 /* CodableHelper.swift */; };
 		F37C733F2B09694500FC13B1 /* MemoryLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C733E2B09694500FC13B1 /* MemoryLocalStorage.swift */; };
+		F37C73412B09730B00FC13B1 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73402B09730B00FC13B1 /* UITableView+Extension.swift */; };
+		F37C73432B09A62700FC13B1 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */; };
+		F37C73452B09A8E800FC13B1 /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73442B09A8E800FC13B1 /* DateConstants.swift */; };
+		F37C73472B09ACF400FC13B1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73462B09ACF400FC13B1 /* Date+Extension.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -91,6 +95,10 @@
 		F37C73392B0932F500FC13B1 /* UserDefaultsLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocalStorage.swift; sourceTree = "<group>"; };
 		F37C733C2B09379700FC13B1 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
 		F37C733E2B09694500FC13B1 /* MemoryLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLocalStorage.swift; sourceTree = "<group>"; };
+		F37C73402B09730B00FC13B1 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		F37C73442B09A8E800FC13B1 /* DateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConstants.swift; sourceTree = "<group>"; };
+		F37C73462B09ACF400FC13B1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,9 +319,12 @@
 		F3C766152B072377002DDAFC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F37C73462B09ACF400FC13B1 /* Date+Extension.swift */,
 				F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */,
 				F3C766162B072456002DDAFC /* String+Extension.swift */,
+				F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */,
 				F3C766312B073156002DDAFC /* UIImageView+Extension.swift */,
+				F37C73402B09730B00FC13B1 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +409,7 @@
 				F3C766512B073F99002DDAFC /* Coordinator.swift */,
 				F3C766562B0740BE002DDAFC /* CoordinatorArgs.swift */,
 				F3C766582B07413B002DDAFC /* CoordinatorType.swift */,
+				F37C73442B09A8E800FC13B1 /* DateConstants.swift */,
 				F3C766542B074061002DDAFC /* PresentArgs.swift */,
 			);
 			path = Entity;
@@ -579,21 +591,25 @@
 				F3C766682B07CA28002DDAFC /* Resolver+Extension.swift in Sources */,
 				F3C766492B073984002DDAFC /* PublishObservable.swift in Sources */,
 				F37C73332B09237F00FC13B1 /* CoreModule+Data.swift in Sources */,
+				F37C73432B09A62700FC13B1 /* UICollectionView+Extension.swift in Sources */,
 				F3C766572B0740BE002DDAFC /* CoordinatorArgs.swift in Sources */,
 				F3C766522B073F99002DDAFC /* Coordinator.swift in Sources */,
 				F37C73242B07D74B00FC13B1 /* Reusable.swift in Sources */,
 				F37C732F2B07D96C00FC13B1 /* CoreModule+Domain.swift in Sources */,
 				F3C7665C2B0795BF002DDAFC /* MainControllerProvider.swift in Sources */,
+				F37C73472B09ACF400FC13B1 /* Date+Extension.swift in Sources */,
 				F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */,
 				F37C732A2B07D8B600FC13B1 /* UseCase.swift in Sources */,
 				F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */,
 				F3C766552B074061002DDAFC /* PresentArgs.swift in Sources */,
 				F3C766592B07413B002DDAFC /* CoordinatorType.swift in Sources */,
+				F37C73452B09A8E800FC13B1 /* DateConstants.swift in Sources */,
 				F37C73222B07D6E000FC13B1 /* ClosureUseCase.swift in Sources */,
 				F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */,
 				F3C7661C2B07251B002DDAFC /* SplashViewController.swift in Sources */,
 				F3C766172B072456002DDAFC /* String+Extension.swift in Sources */,
 				F37C73262B07D77E00FC13B1 /* CaseResult.swift in Sources */,
+				F37C73412B09730B00FC13B1 /* UITableView+Extension.swift in Sources */,
 				F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */,
 				F37C733A2B0932F500FC13B1 /* UserDefaultsLocalStorage.swift in Sources */,
 				F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */,
