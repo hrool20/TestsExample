@@ -24,5 +24,6 @@ final class Injection {
         // Add here all modules to be injected
         CoreModule(container).inject()
         SplashModule(container).inject()
+        MainTabBarModule(container).inject()
     }
 }

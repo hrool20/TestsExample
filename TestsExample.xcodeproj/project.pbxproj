@@ -27,6 +27,13 @@
 		F37C73432B09A62700FC13B1 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */; };
 		F37C73452B09A8E800FC13B1 /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73442B09A8E800FC13B1 /* DateConstants.swift */; };
 		F37C73472B09ACF400FC13B1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73462B09ACF400FC13B1 /* Date+Extension.swift */; };
+		F3B59A352B09BFA900E421BD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A342B09BFA900E421BD /* MainTabBarController.swift */; };
+		F3B59A392B09BFE500E421BD /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A382B09BFE500E421BD /* BaseTabBarController.swift */; };
+		F3B59A3B2B09C0EC00E421BD /* SubscribeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A3A2B09C0EC00E421BD /* SubscribeHelper.swift */; };
+		F3B59A3D2B09C18000E421BD /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A3C2B09C18000E421BD /* BaseController.swift */; };
+		F3B59A402B09C70300E421BD /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A3F2B09C70300E421BD /* MainTabBarViewModel.swift */; };
+		F3B59A432B09C93400E421BD /* MainTabBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A422B09C93400E421BD /* MainTabBarModule.swift */; };
+		F3B59A452B09CADA00E421BD /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A442B09CADA00E421BD /* UIApplication+Extension.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -99,6 +106,13 @@
 		F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		F37C73442B09A8E800FC13B1 /* DateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConstants.swift; sourceTree = "<group>"; };
 		F37C73462B09ACF400FC13B1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		F3B59A342B09BFA900E421BD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F3B59A382B09BFE500E421BD /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		F3B59A3A2B09C0EC00E421BD /* SubscribeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeHelper.swift; sourceTree = "<group>"; };
+		F3B59A3C2B09C18000E421BD /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		F3B59A3F2B09C70300E421BD /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
+		F3B59A422B09C93400E421BD /* MainTabBarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarModule.swift; sourceTree = "<group>"; };
+		F3B59A442B09CADA00E421BD /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +249,48 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		F3B59A332B09BF7F00E421BD /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A412B09C92800E421BD /* DI */,
+				F3B59A362B09BFAF00E421BD /* Presentation */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		F3B59A362B09BFAF00E421BD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A372B09BFB600E421BD /* View */,
+				F3B59A3E2B09C6F700E421BD /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3B59A372B09BFB600E421BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A342B09BFA900E421BD /* MainTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3B59A3E2B09C6F700E421BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A3F2B09C70300E421BD /* MainTabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3B59A412B09C92800E421BD /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A422B09C93400E421BD /* MainTabBarModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		F3C765D32B071AB3002DDAFC = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				F3C766142B07236C002DDAFC /* Core */,
+				F3B59A332B09BF7F00E421BD /* MainTabBar */,
 				F3C766182B0724FB002DDAFC /* Splash */,
 			);
 			path = AppModules;
@@ -322,6 +379,7 @@
 				F37C73462B09ACF400FC13B1 /* Date+Extension.swift */,
 				F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */,
 				F3C766162B072456002DDAFC /* String+Extension.swift */,
+				F3B59A442B09CADA00E421BD /* UIApplication+Extension.swift */,
 				F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */,
 				F3C766312B073156002DDAFC /* UIImageView+Extension.swift */,
 				F37C73402B09730B00FC13B1 /* UITableView+Extension.swift */,
@@ -370,7 +428,10 @@
 		F3C766342B073439002DDAFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3B59A3C2B09C18000E421BD /* BaseController.swift */,
+				F3B59A382B09BFE500E421BD /* BaseTabBarController.swift */,
 				F3C766352B073458002DDAFC /* BaseViewController.swift */,
+				F3B59A3A2B09C0EC00E421BD /* SubscribeHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B59A392B09BFE500E421BD /* BaseTabBarController.swift in Sources */,
 				F37C73362B092CC500FC13B1 /* LocalStorage.swift in Sources */,
 				F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */,
 				F3C766322B073156002DDAFC /* UIImageView+Extension.swift in Sources */,
@@ -594,12 +656,14 @@
 				F37C73432B09A62700FC13B1 /* UICollectionView+Extension.swift in Sources */,
 				F3C766572B0740BE002DDAFC /* CoordinatorArgs.swift in Sources */,
 				F3C766522B073F99002DDAFC /* Coordinator.swift in Sources */,
+				F3B59A3B2B09C0EC00E421BD /* SubscribeHelper.swift in Sources */,
 				F37C73242B07D74B00FC13B1 /* Reusable.swift in Sources */,
 				F37C732F2B07D96C00FC13B1 /* CoreModule+Domain.swift in Sources */,
 				F3C7665C2B0795BF002DDAFC /* MainControllerProvider.swift in Sources */,
 				F37C73472B09ACF400FC13B1 /* Date+Extension.swift in Sources */,
 				F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */,
 				F37C732A2B07D8B600FC13B1 /* UseCase.swift in Sources */,
+				F3B59A432B09C93400E421BD /* MainTabBarModule.swift in Sources */,
 				F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */,
 				F3C766552B074061002DDAFC /* PresentArgs.swift in Sources */,
 				F3C766592B07413B002DDAFC /* CoordinatorType.swift in Sources */,
@@ -616,13 +680,17 @@
 				F3C766392B073472002DDAFC /* BaseViewModel.swift in Sources */,
 				F37C73282B07D80700FC13B1 /* AnyClosureUseCase.swift in Sources */,
 				F37C73382B092D3E00FC13B1 /* KeychainLocalStorage.swift in Sources */,
+				F3B59A452B09CADA00E421BD /* UIApplication+Extension.swift in Sources */,
 				F3C766612B079D13002DDAFC /* SplashModule.swift in Sources */,
 				F3C766362B073458002DDAFC /* BaseViewController.swift in Sources */,
 				F37C733D2B09379700FC13B1 /* CodableHelper.swift in Sources */,
 				F3C766642B07C92C002DDAFC /* SplashViewModel.swift in Sources */,
+				F3B59A3D2B09C18000E421BD /* BaseController.swift in Sources */,
 				F3C766502B073DB9002DDAFC /* NotificationCenterWrapperImpl.swift in Sources */,
+				F3B59A402B09C70300E421BD /* MainTabBarViewModel.swift in Sources */,
 				F3C7665E2B079731002DDAFC /* Injection.swift in Sources */,
 				F3C7664E2B073D7B002DDAFC /* NotificationCenterWrapper.swift in Sources */,
+				F3B59A352B09BFA900E421BD /* MainTabBarController.swift in Sources */,
 				F37C733F2B09694500FC13B1 /* MemoryLocalStorage.swift in Sources */,
 				F37C732C2B07D8D400FC13B1 /* AnyUseCase.swift in Sources */,
 				F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */,
