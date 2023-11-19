@@ -12,4 +12,5 @@ struct UiProductItem: Equatable {
     let name: String
     let description: String
     let price: String
+    let imageUrl: String?
 }

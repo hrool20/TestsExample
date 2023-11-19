@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProductPresentationMapper {
-    func map(_ value: UiProduct) -> UiProductItem
+    func map(_ value: [UiProduct]) -> [UiProductItem]
 }

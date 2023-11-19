@@ -52,6 +52,7 @@
 		F3B59A762B09DFFC00E421BD /* ProductRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A752B09DFFC00E421BD /* ProductRemoteDataSourceImpl.swift */; };
 		F3B59A792B09E04B00E421BD /* ProductDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A782B09E04B00E421BD /* ProductDataMapper.swift */; };
 		F3B59A7B2B09E07200E421BD /* ProductDataMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A7A2B09E07200E421BD /* ProductDataMapperImpl.swift */; };
+		F3B59A802B09F14F00E421BD /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A7F2B09F14F00E421BD /* ProductTableViewCell.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -149,6 +150,7 @@
 		F3B59A752B09DFFC00E421BD /* ProductRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		F3B59A782B09E04B00E421BD /* ProductDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataMapper.swift; sourceTree = "<group>"; };
 		F3B59A7A2B09E07200E421BD /* ProductDataMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataMapperImpl.swift; sourceTree = "<group>"; };
+		F3B59A7F2B09F14F00E421BD /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		F3B59A482B09CEE700E421BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3B59A7E2B09F13400E421BD /* Cells */,
 				F3B59A4C2B09CFF200E421BD /* ProductsViewController.swift */,
 			);
 			path = View;
@@ -470,6 +473,14 @@
 				F3B59A7A2B09E07200E421BD /* ProductDataMapperImpl.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		F3B59A7E2B09F13400E421BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A7F2B09F14F00E421BD /* ProductTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F3C765D32B071AB3002DDAFC = {
@@ -833,6 +844,7 @@
 				F3B59A392B09BFE500E421BD /* BaseTabBarController.swift in Sources */,
 				F37C73362B092CC500FC13B1 /* LocalStorage.swift in Sources */,
 				F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */,
+				F3B59A802B09F14F00E421BD /* ProductTableViewCell.swift in Sources */,
 				F3C766322B073156002DDAFC /* UIImageView+Extension.swift in Sources */,
 				F3C766682B07CA28002DDAFC /* Resolver+Extension.swift in Sources */,
 				F3B59A532B09D56200E421BD /* UiProduct.swift in Sources */,

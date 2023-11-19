@@ -39,7 +39,8 @@ final class ProductModule: BaseModule {
         container.register(ProductsViewModel.self) { resolver in
             .init(fetchProductsUseCase: resolver.load(
                 FetchProductsUseCase.Alias.self,
-                FetchProductsUseCase.identifier)
+                FetchProductsUseCase.identifier),
+                  mapper: resolver.load(ProductPresentationMapper.self)
             )
         }
         container.register(ProductsViewController.self) { resolver in

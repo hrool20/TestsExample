@@ -26,11 +26,11 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
         tableView.separatorStyle = .singleLine
         return tableView
     }()
-    private var items: [UiProductItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        bindViewModel()
         viewModel.onViewDidLoad()
     }
 
@@ -44,7 +44,8 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
         tableView.estimatedSectionHeaderHeight = .zero
         tableView.estimatedSectionFooterHeight = .zero
         tableView.tableFooterView = UIView(frame: Constants.TableView.leastNonzero)
-        
+        tableView.registerClass(ProductTableViewCell.self)
+        setupConstraints()
     }
 
     private func setupConstraints() {
@@ -59,25 +60,28 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
             view.safeAreaLayoutGuide.bottomAnchor.constraint(
                 equalTo: tableView.bottomAnchor)
         ]
-        NSLayoutConstraint.activate(
-            tableViewConstraints
-        )
+        NSLayoutConstraint.activate(tableViewConstraints)
         view.setNeedsLayout()
         view.layoutIfNeeded()
     }
 
     private func bindViewModel() {
         subscribeToLoading()
+        subscribe(observable: viewModel.$items) { [weak self] _ in
+            self?.tableView.reloadData()
+        }
     }
 
     // MARK: - UITableViewDelegate && UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items?.count ?? .zero
+        viewModel.items?.count ?? .zero
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        .init()
+        let cell = tableView.dequeueReusableCell(indexPath) as ProductTableViewCell
+        cell.item = viewModel.items?[indexPath.row]
+        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
