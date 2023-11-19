@@ -12,10 +12,10 @@ final class MainTabBarController: BaseTabBarController<MainTabBarViewModel> {
     private enum Constants {
         static let collectionImage: UIImage = .add
         static let collectionTitle: String = "Tablas"
+        static let productsImage: UIImage = .actions
+        static let productsTitle: String = "Productos"
         static let profileImage: UIImage = .remove
         static let profileTitle: String = "Mi perfil"
-        static let tableImage: UIImage = .actions
-        static let tableTitle: String = "Collección"
     }
 
     override func viewDidLoad() {
@@ -24,12 +24,12 @@ final class MainTabBarController: BaseTabBarController<MainTabBarViewModel> {
     }
 
     private func setupUI() {
-        let tableList = Injection.shared.provider.getTableList()
-        let collectionList = Injection.shared.provider.getCollectionList()
+        let products = Injection.shared.provider.getProducts()
+        let collection = Injection.shared.provider.getCollectionList()
         let profile = Injection.shared.provider.getProfile()
         let controllers = [
-            withNavigation(tableList, title: Constants.tableTitle, image: Constants.tableImage),
-            withNavigation(collectionList, title: Constants.collectionTitle, image: Constants.collectionImage),
+            withNavigation(products, title: Constants.productsTitle, image: Constants.productsImage),
+            withNavigation(collection, title: Constants.collectionTitle, image: Constants.collectionImage),
             withNavigation(profile, title: Constants.profileTitle, image: Constants.profileImage)
         ]
         setViewControllers(controllers, animated: false)

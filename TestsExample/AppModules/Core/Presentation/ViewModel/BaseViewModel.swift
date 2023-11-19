@@ -14,5 +14,5 @@ class BaseViewModel {
         disposeBag = .init()
     }
 
-    @PublishObservable var isLoading: Bool = false
+    @PublishObservable final var isLoading: Bool = false
 }

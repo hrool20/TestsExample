@@ -23,8 +23,8 @@ final class MainControllerProvider {
         container.load(MainTabBarController.self)
     }
 
-    func getTableList() -> UIViewController {
-        .init()
+    func getProducts() -> ProductsViewController {
+        container.load(ProductsViewController.self)
     }
 
     func getCollectionList() -> UIViewController {

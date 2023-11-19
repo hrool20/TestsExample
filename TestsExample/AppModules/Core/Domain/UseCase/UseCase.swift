@@ -16,4 +16,12 @@ protocol UseCase: Reusable {
 }
 extension UseCase {
     typealias Alias = AnyUseCase<RequestType, ResultType, ErrorType>
+
+    func execute() -> CaseResult<ResultType, ErrorType> where RequestType == Void {
+        execute(())
+    }
+
+    func execute() -> CaseResult<ResultType, ErrorType> where RequestType == Optional<Void> {
+        execute(nil)
+    }
 }
