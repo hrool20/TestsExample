@@ -21,6 +21,6 @@ final class CouponDataMapperImpl: CouponDataMapper {
             legal: value.legal,
             used: value.used,
             maximumUses: value.maximumUses,
-            status: .init(rawValue: value.status) ?? .unactivated)
+            status: .init(rawValue: value.status))
     }
 }

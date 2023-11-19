@@ -65,6 +65,12 @@
 		F3B59A9E2B0A94CF00E421BD /* CouponDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A9D2B0A94CF00E421BD /* CouponDomainMapper.swift */; };
 		F3B59AA02B0A94E800E421BD /* CouponDomainMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A9F2B0A94E800E421BD /* CouponDomainMapperImpl.swift */; };
 		F3B59AA32B0A953000E421BD /* DomainCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AA22B0A953000E421BD /* DomainCoupon.swift */; };
+		F3B59AA82B0A982E00E421BD /* UiCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AA72B0A982E00E421BD /* UiCoupon.swift */; };
+		F3B59AAB2B0A997700E421BD /* CouponsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AAA2B0A997700E421BD /* CouponsViewModel.swift */; };
+		F3B59AAE2B0A999800E421BD /* CouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AAD2B0A999800E421BD /* CouponsViewController.swift */; };
+		F3B59AB12B0AB02000E421BD /* CouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AB02B0AB02000E421BD /* CouponCollectionViewCell.swift */; };
+		F3B59AB32B0ABB8200E421BD /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AB22B0ABB8200E421BD /* NSLayoutConstraint+Extension.swift */; };
+		F3B59AB52B0ABC7C00E421BD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AB42B0ABC7C00E421BD /* UIView+Extension.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -175,6 +181,12 @@
 		F3B59A9D2B0A94CF00E421BD /* CouponDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDomainMapper.swift; sourceTree = "<group>"; };
 		F3B59A9F2B0A94E800E421BD /* CouponDomainMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDomainMapperImpl.swift; sourceTree = "<group>"; };
 		F3B59AA22B0A953000E421BD /* DomainCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainCoupon.swift; sourceTree = "<group>"; };
+		F3B59AA72B0A982E00E421BD /* UiCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiCoupon.swift; sourceTree = "<group>"; };
+		F3B59AAA2B0A997700E421BD /* CouponsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewModel.swift; sourceTree = "<group>"; };
+		F3B59AAD2B0A999800E421BD /* CouponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewController.swift; sourceTree = "<group>"; };
+		F3B59AB02B0AB02000E421BD /* CouponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3B59AB22B0ABB8200E421BD /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
+		F3B59AB42B0ABC7C00E421BD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -513,6 +525,7 @@
 				F3B59A822B0A8E7600E421BD /* Data */,
 				F3B59A832B0A8E7D00E421BD /* DI */,
 				F3B59A982B0A940500E421BD /* Domain */,
+				F3B59AA42B0A97FD00E421BD /* Presentation */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -606,6 +619,49 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		F3B59AA42B0A97FD00E421BD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AA62B0A982400E421BD /* Entity */,
+				F3B59AAC2B0A998800E421BD /* View */,
+				F3B59AA92B0A996000E421BD /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3B59AA62B0A982400E421BD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AA72B0A982E00E421BD /* UiCoupon.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F3B59AA92B0A996000E421BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AAA2B0A997700E421BD /* CouponsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3B59AAC2B0A998800E421BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AAF2B0AAFE800E421BD /* Cells */,
+				F3B59AAD2B0A999800E421BD /* CouponsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3B59AAF2B0AAFE800E421BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AB02B0AB02000E421BD /* CouponCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F3C765D32B071AB3002DDAFC = {
 			isa = PBXGroup;
 			children = (
@@ -694,12 +750,14 @@
 			isa = PBXGroup;
 			children = (
 				F37C73462B09ACF400FC13B1 /* Date+Extension.swift */,
+				F3B59AB22B0ABB8200E421BD /* NSLayoutConstraint+Extension.swift */,
 				F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */,
 				F3C766162B072456002DDAFC /* String+Extension.swift */,
 				F3B59A442B09CADA00E421BD /* UIApplication+Extension.swift */,
 				F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */,
 				F3C766312B073156002DDAFC /* UIImageView+Extension.swift */,
 				F37C73402B09730B00FC13B1 /* UITableView+Extension.swift */,
+				F3B59AB42B0ABC7C00E421BD /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -967,8 +1025,10 @@
 				F3B59A792B09E04B00E421BD /* ProductDataMapper.swift in Sources */,
 				F3B59A582B09D61B00E421BD /* UiProductItem.swift in Sources */,
 				F3B59A392B09BFE500E421BD /* BaseTabBarController.swift in Sources */,
+				F3B59AB12B0AB02000E421BD /* CouponCollectionViewCell.swift in Sources */,
 				F37C73362B092CC500FC13B1 /* LocalStorage.swift in Sources */,
 				F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */,
+				F3B59AAE2B0A999800E421BD /* CouponsViewController.swift in Sources */,
 				F3B59A802B09F14F00E421BD /* ProductTableViewCell.swift in Sources */,
 				F3C766322B073156002DDAFC /* UIImageView+Extension.swift in Sources */,
 				F3C766682B07CA28002DDAFC /* Resolver+Extension.swift in Sources */,
@@ -990,6 +1050,7 @@
 				F3B59A432B09C93400E421BD /* MainTabBarModule.swift in Sources */,
 				F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */,
 				F3C766552B074061002DDAFC /* PresentArgs.swift in Sources */,
+				F3B59AA82B0A982E00E421BD /* UiCoupon.swift in Sources */,
 				F3C766592B07413B002DDAFC /* CoordinatorType.swift in Sources */,
 				F37C73452B09A8E800FC13B1 /* DateConstants.swift in Sources */,
 				F3B59A6B2B09DF4E00E421BD /* ProductRepositoryImpl.swift in Sources */,
@@ -1017,7 +1078,10 @@
 				F3B59A642B09DDFC00E421BD /* ProductDomainMapperImpl.swift in Sources */,
 				F3B59A742B09DFD600E421BD /* ApiProduct.swift in Sources */,
 				F3B59A562B09D5FD00E421BD /* ProductPresentationMapper.swift in Sources */,
+				F3B59AB32B0ABB8200E421BD /* NSLayoutConstraint+Extension.swift in Sources */,
+				F3B59AB52B0ABC7C00E421BD /* UIView+Extension.swift in Sources */,
 				F3B59A8F2B0A8F5B00E421BD /* CouponDataMapperImpl.swift in Sources */,
+				F3B59AAB2B0A997700E421BD /* CouponsViewModel.swift in Sources */,
 				F3B59A502B09D2CA00E421BD /* ProductModule.swift in Sources */,
 				F3B59A452B09CADA00E421BD /* UIApplication+Extension.swift in Sources */,
 				F3B59A952B0A90BA00E421BD /* CouponRemoteDataSource.swift in Sources */,

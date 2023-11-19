@@ -9,7 +9,7 @@ import Foundation
 
 final class FetchCouponsUseCase: ClosureUseCase {
     typealias RequestType = Void?
-    typealias ResultType = [DomainCoupon]
+    typealias ResultType = [UiCoupon]
     typealias ErrorType = Error
 
     private let repository: CouponRepository
@@ -27,7 +27,9 @@ final class FetchCouponsUseCase: ClosureUseCase {
         _ parameters: RequestType,
         _ onCompletion: @escaping (CaseResult<ResultType, ErrorType>) -> Void
     ) {
-        repository.fetchCoupons { result in
+        repository.fetchCoupons { [weak self] result in
+            guard let self = self else { return }
+            onCompletion(result.map(self.mapper.domainToPresentation(_:)))
         }
     }
 }

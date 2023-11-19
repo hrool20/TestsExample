@@ -26,7 +26,7 @@ final class CouponRemoteDataSourceImpl: CouponRemoteDataSource {
                 id: "\(i)", title: "Coupon with a \(i * val) % of discount",
                 description: "This coupons offer a \(i * val) % of discount. You have to go to a store to use it.",
                 imageUrl: images.randomElement()!, legal: "Este cupón es válido hasta dentro de \(val) días", used: 1,
-                maximumUses: val, status: .init(rawValue: ["activated", "unactivated", "used"].randomElement()!) ?? .unactivated))
+                maximumUses: val, status: ["activated", "unactivated", "used"].randomElement()!))
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
             onCompletion(.success(data: array))

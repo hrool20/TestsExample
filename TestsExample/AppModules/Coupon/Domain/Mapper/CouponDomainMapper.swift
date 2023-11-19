@@ -8,4 +8,5 @@
 import Foundation
 
 protocol CouponDomainMapper {
+    func domainToPresentation(_ value: [DomainCoupon]) -> [UiCoupon]
 }

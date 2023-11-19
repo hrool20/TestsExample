@@ -20,5 +20,5 @@ struct DomainCoupon: Equatable {
     let legal: String?
     let used: Int
     let maximumUses: Int
-    let status: Status
+    let status: Status?
 }

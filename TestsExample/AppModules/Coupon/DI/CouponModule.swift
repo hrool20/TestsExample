@@ -33,5 +33,18 @@ final class CouponModule: BaseModule {
                 mapper: resolver.load(CouponDomainMapper.self)
             ))
         }
+        container.register(CouponsViewModel.self) { resolver in
+            .init(fetchCouponsUseCase: resolver.load(
+                FetchCouponsUseCase.Alias.self,
+                FetchCouponsUseCase.identifier)
+            )
+        }
+        container.register(CouponsViewController.self) { resolver in
+            .init(
+                coordinator: resolver.load(Coordinator.self),
+                resolver.load(CouponsViewModel.self),
+                notificationCenter: resolver.load(NotificationCenterWrapper.self)
+            )
+        }
     }
 }
