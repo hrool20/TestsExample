@@ -1,5 +1,5 @@
 //
-//  ProductDomainMapperImpl.swift
+//  ProductDataMapperImpl.swift
 //  TestsExample
 //
 //  Created by Hugo A. Rosado on 19/11/23.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-final class ProductDomainMapperImpl: ProductDomainMapper {
-    func domainToPresentation(_ value: [DomainProduct]) -> [UiProduct] {
-        value.map(domainToPresentation(_:))
+final class ProductDataMapperImpl: ProductDataMapper {
+    func dataToDomain(_ value: [ApiProduct]) -> [DomainProduct] {
+        value.map(dataToDomain(_:))
     }
 
-    private func domainToPresentation(_ value: DomainProduct) -> UiProduct {
+    private func dataToDomain(_ value: ApiProduct) -> DomainProduct {
         .init(
             id: value.id,
             itemId: value.itemId,

@@ -9,14 +9,29 @@ import Foundation
 
 final class ProductModule: BaseModule {
     func inject() {
+        container.register(ProductDataMapper.self) { _ in
+            ProductDataMapperImpl()
+        }
+        container.register(ProductRemoteDataSource.self) { _ in
+            ProductRemoteDataSourceImpl()
+        }
+        container.register(ProductRepository.self) { resolver in
+            ProductRepositoryImpl(
+                remote: resolver.load(ProductRemoteDataSource.self),
+                mapper: resolver.load(ProductDataMapper.self)
+            )
+        }
         container.register(ProductDomainMapper.self) { _ in
             ProductDomainMapperImpl()
         }
         container.register(
             FetchProductsUseCase.Alias.self,
             name: FetchProductsUseCase.identifier
-        ) { _ in
-            .init(FetchProductsUseCase())
+        ) { resolver in
+            .init(FetchProductsUseCase(
+                repository: resolver.load(ProductRepository.self),
+                mapper: resolver.load(ProductDomainMapper.self)
+            ))
         }
         container.register(ProductPresentationMapper.self) { _ in
             ProductPresentationMapperImpl()
