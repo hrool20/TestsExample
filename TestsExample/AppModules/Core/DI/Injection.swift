@@ -26,5 +26,6 @@ final class Injection {
         SplashModule(container).inject()
         MainTabBarModule(container).inject()
         ProductModule(container).inject()
+        CouponModule(container).inject()
     }
 }
