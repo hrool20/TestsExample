@@ -17,9 +17,10 @@ extension SubscribeHelper where Self: BaseController, V: BaseViewModel {
         }).disposed(by: disposeBag)
     }
 
-    func subscribeToLoading() {
+    func subscribeToLoading(_ completion: ((Bool) -> Void)? = nil) {
         subscribe(observable: viewModel.$isLoading) { [weak self] value in
             self?.showLoading(value)
+            completion?(value)
         }
     }
 }

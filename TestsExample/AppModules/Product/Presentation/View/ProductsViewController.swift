@@ -44,6 +44,13 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
         tableView.estimatedSectionHeaderHeight = .zero
         tableView.estimatedSectionFooterHeight = .zero
         tableView.tableFooterView = UIView(frame: Constants.TableView.leastNonzero)
+        let refreshControl: UIRefreshControl = {
+            let refreshControl = UIRefreshControl(frame: .zero)
+            refreshControl.translatesAutoresizingMaskIntoConstraints = false
+            refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
+            return refreshControl
+        }()
+        tableView.refreshControl = refreshControl
         tableView.registerClass(ProductTableViewCell.self)
         setupConstraints()
     }
@@ -66,10 +73,17 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
     }
 
     private func bindViewModel() {
-        subscribeToLoading()
+        subscribeToLoading { [weak self] value in
+            guard !value else { return }
+            self?.tableView.refreshControl?.endRefreshing()
+        }
         subscribe(observable: viewModel.$items) { [weak self] _ in
             self?.tableView.reloadData()
         }
+    }
+
+    @objc private func didRefresh() {
+        viewModel.onReload()
     }
 
     // MARK: - UITableViewDelegate && UITableViewDataSource

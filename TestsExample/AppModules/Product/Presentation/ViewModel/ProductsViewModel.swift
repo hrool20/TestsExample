@@ -22,7 +22,17 @@ final class ProductsViewModel: BaseViewModel {
     @PublishObservable private(set) var items: [UiProductItem]?
 
     func onViewDidLoad() {
-        isLoading = true
+        fetchProducts(false)
+    }
+
+    func onReload() {
+        fetchProducts(true)
+    }
+
+    private func fetchProducts(_ isUpdating: Bool) {
+        if !isUpdating {
+            isLoading = true
+        }
         fetchProductsUseCase.execute { [weak self] result in
             guard let self = self else { return }
             self.isLoading = false
