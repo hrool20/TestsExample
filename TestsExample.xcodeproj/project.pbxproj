@@ -61,6 +61,10 @@
 		F3B59A922B0A8F7E00E421BD /* ApiCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A912B0A8F7E00E421BD /* ApiCoupon.swift */; };
 		F3B59A952B0A90BA00E421BD /* CouponRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A942B0A90BA00E421BD /* CouponRemoteDataSource.swift */; };
 		F3B59A972B0A90E700E421BD /* CouponRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A962B0A90E700E421BD /* CouponRemoteDataSourceImpl.swift */; };
+		F3B59A9B2B0A942B00E421BD /* FetchCouponsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A9A2B0A942B00E421BD /* FetchCouponsUseCase.swift */; };
+		F3B59A9E2B0A94CF00E421BD /* CouponDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A9D2B0A94CF00E421BD /* CouponDomainMapper.swift */; };
+		F3B59AA02B0A94E800E421BD /* CouponDomainMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A9F2B0A94E800E421BD /* CouponDomainMapperImpl.swift */; };
+		F3B59AA32B0A953000E421BD /* DomainCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59AA22B0A953000E421BD /* DomainCoupon.swift */; };
 		F3C765E02B071AB3002DDAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */; };
 		F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */; };
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
@@ -167,6 +171,10 @@
 		F3B59A912B0A8F7E00E421BD /* ApiCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCoupon.swift; sourceTree = "<group>"; };
 		F3B59A942B0A90BA00E421BD /* CouponRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponRemoteDataSource.swift; sourceTree = "<group>"; };
 		F3B59A962B0A90E700E421BD /* CouponRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		F3B59A9A2B0A942B00E421BD /* FetchCouponsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCouponsUseCase.swift; sourceTree = "<group>"; };
+		F3B59A9D2B0A94CF00E421BD /* CouponDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDomainMapper.swift; sourceTree = "<group>"; };
+		F3B59A9F2B0A94E800E421BD /* CouponDomainMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDomainMapperImpl.swift; sourceTree = "<group>"; };
+		F3B59AA22B0A953000E421BD /* DomainCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainCoupon.swift; sourceTree = "<group>"; };
 		F3C765DC2B071AB3002DDAFC /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C765DF2B071AB3002DDAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C765E12B071AB3002DDAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -504,6 +512,7 @@
 			children = (
 				F3B59A822B0A8E7600E421BD /* Data */,
 				F3B59A832B0A8E7D00E421BD /* DI */,
+				F3B59A982B0A940500E421BD /* Domain */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -560,6 +569,41 @@
 				F3B59A962B0A90E700E421BD /* CouponRemoteDataSourceImpl.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		F3B59A982B0A940500E421BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AA12B0A950F00E421BD /* Entity */,
+				F3B59A9C2B0A94B800E421BD /* Mapper */,
+				F3B59A992B0A941300E421BD /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F3B59A992B0A941300E421BD /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A9A2B0A942B00E421BD /* FetchCouponsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F3B59A9C2B0A94B800E421BD /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59A9D2B0A94CF00E421BD /* CouponDomainMapper.swift */,
+				F3B59A9F2B0A94E800E421BD /* CouponDomainMapperImpl.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		F3B59AA12B0A950F00E421BD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F3B59AA22B0A953000E421BD /* DomainCoupon.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		F3C765D32B071AB3002DDAFC = {
@@ -919,6 +963,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B59AA02B0A94E800E421BD /* CouponDomainMapperImpl.swift in Sources */,
 				F3B59A792B09E04B00E421BD /* ProductDataMapper.swift in Sources */,
 				F3B59A582B09D61B00E421BD /* UiProductItem.swift in Sources */,
 				F3B59A392B09BFE500E421BD /* BaseTabBarController.swift in Sources */,
@@ -961,10 +1006,12 @@
 				F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */,
 				F37C733A2B0932F500FC13B1 /* UserDefaultsLocalStorage.swift in Sources */,
 				F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */,
+				F3B59AA32B0A953000E421BD /* DomainCoupon.swift in Sources */,
 				F3B59A4B2B09CEFB00E421BD /* ProductsViewModel.swift in Sources */,
 				F3C766392B073472002DDAFC /* BaseViewModel.swift in Sources */,
 				F3B59A622B09DDE600E421BD /* ProductDomainMapper.swift in Sources */,
 				F3B59A852B0A8E8B00E421BD /* CouponModule.swift in Sources */,
+				F3B59A9B2B0A942B00E421BD /* FetchCouponsUseCase.swift in Sources */,
 				F37C73282B07D80700FC13B1 /* AnyClosureUseCase.swift in Sources */,
 				F37C73382B092D3E00FC13B1 /* KeychainLocalStorage.swift in Sources */,
 				F3B59A642B09DDFC00E421BD /* ProductDomainMapperImpl.swift in Sources */,
@@ -974,6 +1021,7 @@
 				F3B59A502B09D2CA00E421BD /* ProductModule.swift in Sources */,
 				F3B59A452B09CADA00E421BD /* UIApplication+Extension.swift in Sources */,
 				F3B59A952B0A90BA00E421BD /* CouponRemoteDataSource.swift in Sources */,
+				F3B59A9E2B0A94CF00E421BD /* CouponDomainMapper.swift in Sources */,
 				F3C766612B079D13002DDAFC /* SplashModule.swift in Sources */,
 				F3C766362B073458002DDAFC /* BaseViewController.swift in Sources */,
 				F37C733D2B09379700FC13B1 /* CodableHelper.swift in Sources */,

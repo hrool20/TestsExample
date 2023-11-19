@@ -8,4 +8,5 @@
 import Foundation
 
 protocol CouponDataMapper {
+    func dataToDomain(_ value: [ApiCoupon]) -> [DomainCoupon]
 }

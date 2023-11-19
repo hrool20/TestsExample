@@ -19,6 +19,10 @@ final class CouponRepositoryImpl: CouponRepository {
         self.mapper = mapper
     }
 
-    func fetchCoupons(_ onCompletion: @escaping (CaseResult<[Void], Error>) -> Void) {
+    func fetchCoupons(_ onCompletion: @escaping (CaseResult<[DomainCoupon], Error>) -> Void) {
+        remote.fetchCoupons { [weak self] result in
+            guard let self = self else { return }
+            onCompletion(result.map(self.mapper.dataToDomain(_:)))
+        }
     }
 }

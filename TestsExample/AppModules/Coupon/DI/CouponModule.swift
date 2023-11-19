@@ -21,5 +21,17 @@ final class CouponModule: BaseModule {
                 mapper: resolver.load(CouponDataMapper.self)
             )
         }
+        container.register(CouponDomainMapper.self) { _ in
+            CouponDomainMapperImpl()
+        }
+        container.register(
+            FetchCouponsUseCase.Alias.self,
+            name: FetchCouponsUseCase.identifier
+        ) { resolver in
+            .init(FetchCouponsUseCase(
+                repository: resolver.load(CouponRepository.self),
+                mapper: resolver.load(CouponDomainMapper.self)
+            ))
+        }
     }
 }

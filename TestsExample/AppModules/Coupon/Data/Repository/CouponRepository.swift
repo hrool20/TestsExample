@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CouponRepository {
-    func fetchCoupons(_ onCompletion: @escaping(CaseResult<[Void], Error>) -> Void)
+    func fetchCoupons(_ onCompletion: @escaping(CaseResult<[DomainCoupon], Error>) -> Void)
 }

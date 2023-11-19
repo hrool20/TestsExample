@@ -1,5 +1,5 @@
 //
-//  ApiCoupon.swift
+//  DomainCoupon.swift
 //  TestsExample
 //
 //  Created by Hugo A. Rosado on 19/11/23.
@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct ApiCoupon: Codable, Equatable {
+struct DomainCoupon: Equatable {
+    enum Status: String, Equatable {
+        case activated
+        case unactivated
+        case used
+    }
     let id: String
     let title: String
     let description: String?
@@ -15,5 +20,5 @@ struct ApiCoupon: Codable, Equatable {
     let legal: String?
     let used: Int
     let maximumUses: Int
-    let status: String
+    let status: Status
 }
