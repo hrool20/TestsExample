@@ -18,4 +18,20 @@ final class MainControllerProvider {
     func getSplash() -> SplashViewController {
         container.load(SplashViewController.self)
     }
+
+    func getMainTabBar() -> MainTabBarController {
+        container.load(MainTabBarController.self)
+    }
+
+    func getTableList() -> UIViewController {
+        .init()
+    }
+
+    func getCollectionList() -> UIViewController {
+        .init()
+    }
+
+    func getProfile() -> UIViewController {
+        .init()
+    }
 }

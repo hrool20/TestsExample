@@ -86,6 +86,8 @@ final class SplashViewController: BaseViewController<SplashViewModel> {
 
     private func bindViewModel() {
         subscribe(observable: viewModel.$goToHome) { _ in
+            let vc = Injection.shared.provider.getMainTabBar()
+            UIApplication.shared.activeWindow?.rootViewController = vc
         }
     }
 

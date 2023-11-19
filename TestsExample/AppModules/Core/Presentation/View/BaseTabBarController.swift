@@ -1,14 +1,14 @@
 //
-//  BaseViewController.swift
+//  BaseTabBarController.swift
 //  TestsExample
 //
-//  Created by Hugo A. Rosado on 17/11/23.
+//  Created by Hugo A. Rosado on 18/11/23.
 //
 
 import RxSwift
 import UIKit
 
-class BaseViewController<V: BaseViewModel>: UIViewController, BaseController, SubscribeHelper {
+class BaseTabBarController<V: BaseViewModel>: UITabBarController, BaseController, SubscribeHelper {
 
     let viewModel: V
     let coordinator: Coordinator
@@ -27,7 +27,7 @@ class BaseViewController<V: BaseViewModel>: UIViewController, BaseController, Su
         super.init(nibName: nil, bundle: nil)
         coordinator.viewController = self
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
