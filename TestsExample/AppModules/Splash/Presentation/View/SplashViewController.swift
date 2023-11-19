@@ -85,8 +85,7 @@ final class SplashViewController: BaseViewController<SplashViewModel> {
     }
 
     private func bindViewModel() {
-        subscribe(observable: viewModel.$goToHome) { [weak self] _ in
-            print("@@@ee")
+        subscribe(observable: viewModel.$goToHome) { _ in
         }
     }
 
