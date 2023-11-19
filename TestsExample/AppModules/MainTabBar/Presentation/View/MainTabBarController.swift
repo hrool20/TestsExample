@@ -14,7 +14,7 @@ final class MainTabBarController: BaseTabBarController<MainTabBarViewModel> {
         static let collectionTitle: String = "Tablas"
         static let profileImage: UIImage = .remove
         static let profileTitle: String = "Mi perfil"
-        static let tableImage: UIImage = .checkmark
+        static let tableImage: UIImage = .actions
         static let tableTitle: String = "Collección"
     }
 
