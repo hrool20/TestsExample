@@ -10,8 +10,8 @@ import UIKit
 final class MainTabBarController: BaseTabBarController<MainTabBarViewModel> {
 
     private enum Constants {
-        static let collectionImage: UIImage = .add
-        static let collectionTitle: String = "Tablas"
+        static let couponsImage: UIImage = .add
+        static let couponsTitle: String = "Cupones"
         static let productsImage: UIImage = .actions
         static let productsTitle: String = "Productos"
         static let profileImage: UIImage = .remove
@@ -25,11 +25,11 @@ final class MainTabBarController: BaseTabBarController<MainTabBarViewModel> {
 
     private func setupUI() {
         let products = Injection.shared.provider.getProducts()
-        let collection = Injection.shared.provider.getCollectionList()
+        let coupons = Injection.shared.provider.getCoupons()
         let profile = Injection.shared.provider.getProfile()
         let controllers = [
             withNavigation(products, title: Constants.productsTitle, image: Constants.productsImage),
-            withNavigation(collection, title: Constants.collectionTitle, image: Constants.collectionImage),
+            withNavigation(coupons, title: Constants.couponsTitle, image: Constants.couponsImage),
             withNavigation(profile, title: Constants.profileTitle, image: Constants.profileImage)
         ]
         setViewControllers(controllers, animated: false)

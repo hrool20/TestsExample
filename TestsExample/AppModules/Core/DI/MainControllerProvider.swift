@@ -27,8 +27,8 @@ final class MainControllerProvider {
         container.load(ProductsViewController.self)
     }
 
-    func getCollectionList() -> UIViewController {
-        .init()
+    func getCoupons() -> CouponsViewController {
+        container.load(CouponsViewController.self)
     }
 
     func getProfile() -> UIViewController {
