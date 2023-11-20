@@ -1,0 +1,57 @@
+{
+  "configurations" : [
+    {
+      "id" : "A96B6E99-331A-48A6-8BDE-B579CE4B3E2A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:TestsExample.xcodeproj",
+          "identifier" : "F3C765DB2B071AB3002DDAFC",
+          "name" : "TestsExample"
+        },
+        {
+          "containerPath" : "container:TestsExample.xcodeproj",
+          "identifier" : "F3C765F42B071AB5002DDAFC",
+          "name" : "TestsExampleTests"
+        },
+        {
+          "containerPath" : "container:TestsExample.xcodeproj",
+          "identifier" : "F3C765FE2B071AB5002DDAFC",
+          "name" : "TestsExampleUITests"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TestsExample.xcodeproj",
+      "identifier" : "F3C765DB2B071AB3002DDAFC",
+      "name" : "TestsExample"
+    }
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "RxTestCase"
+      ],
+      "target" : {
+        "containerPath" : "container:TestsExample.xcodeproj",
+        "identifier" : "F3C765F42B071AB5002DDAFC",
+        "name" : "TestsExampleTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TestsExample.xcodeproj",
+        "identifier" : "F3C765FE2B071AB5002DDAFC",
+        "name" : "TestsExampleUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
