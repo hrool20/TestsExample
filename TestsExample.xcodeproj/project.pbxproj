@@ -110,6 +110,9 @@
 		F3F0F2832B0AE021004FCD05 /* TestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2822B0AE021004FCD05 /* TestUseCase.swift */; };
 		F3F0F2852B0AE057004FCD05 /* TestClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2842B0AE057004FCD05 /* TestClosureUseCase.swift */; };
 		F3F0F2882B0AE0FA004FCD05 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = F3F0F2872B0AE0FA004FCD05 /* Cuckoo */; };
+		F3F0F28E2B0AE7D0004FCD05 /* CouponRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F28D2B0AE7D0004FCD05 /* CouponRepositoryTests.swift */; };
+		F3F0F2922B0AEEC3004FCD05 /* CouponFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2912B0AEEC3004FCD05 /* CouponFactory.swift */; };
+		F3F0F2952B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2942B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +233,9 @@
 		F3F0F27E2B0ADE34004FCD05 /* RxTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTestCase.swift; sourceTree = "<group>"; };
 		F3F0F2822B0AE021004FCD05 /* TestUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUseCase.swift; sourceTree = "<group>"; };
 		F3F0F2842B0AE057004FCD05 /* TestClosureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClosureUseCase.swift; sourceTree = "<group>"; };
+		F3F0F28D2B0AE7D0004FCD05 /* CouponRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponRepositoryTests.swift; sourceTree = "<group>"; };
+		F3F0F2912B0AEEC3004FCD05 /* CouponFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponFactory.swift; sourceTree = "<group>"; };
+		F3F0F2942B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponRemoteDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -909,6 +915,8 @@
 			isa = PBXGroup;
 			children = (
 				F3F0F27C2B0ADE00004FCD05 /* Core */,
+				F3F0F28A2B0AE747004FCD05 /* Coupon */,
+				F3F0F2902B0AEEAF004FCD05 /* Factory */,
 				F3C765F92B071AB5002DDAFC /* TestsExampleTests.swift */,
 			);
 			path = AppModules;
@@ -938,6 +946,47 @@
 				F3F0F2842B0AE057004FCD05 /* TestClosureUseCase.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		F3F0F28A2B0AE747004FCD05 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F28B2B0AE760004FCD05 /* Data */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		F3F0F28B2B0AE760004FCD05 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2932B0AF655004FCD05 /* DataSource */,
+				F3F0F28C2B0AE79C004FCD05 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F3F0F28C2B0AE79C004FCD05 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F28D2B0AE7D0004FCD05 /* CouponRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F3F0F2902B0AEEAF004FCD05 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2912B0AEEC3004FCD05 /* CouponFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		F3F0F2932B0AF655004FCD05 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2942B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1204,9 +1253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C765FA2B071AB5002DDAFC /* TestsExampleTests.swift in Sources */,
+				F3F0F2922B0AEEC3004FCD05 /* CouponFactory.swift in Sources */,
+				F3F0F28E2B0AE7D0004FCD05 /* CouponRepositoryTests.swift in Sources */,
 				F3F0F2832B0AE021004FCD05 /* TestUseCase.swift in Sources */,
 				F3F0F27A2B0ADDAA004FCD05 /* GeneratedMocks.swift in Sources */,
 				F3F0F27F2B0ADE34004FCD05 /* RxTestCase.swift in Sources */,
+				F3F0F2952B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift in Sources */,
 				F3F0F2852B0AE057004FCD05 /* TestClosureUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
