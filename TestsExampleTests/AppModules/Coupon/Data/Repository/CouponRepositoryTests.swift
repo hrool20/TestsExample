@@ -19,7 +19,7 @@ final class CouponRepositoryTests: XCTestCase {
 
     override func setUpWithError() throws {
         stub(remote) { stub in
-            when(stub.fetchCoupons(any())).thenDoNothing()
+            when(stub).fetchCoupons(any()).thenDoNothing()
         }
         stub(mapper) { stub in
             when(stub).dataToDomain(

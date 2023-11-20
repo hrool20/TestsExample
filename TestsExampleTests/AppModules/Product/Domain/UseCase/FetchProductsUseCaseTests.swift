@@ -1,5 +1,5 @@
 //
-//  FetchCouponsUseCaseTests.swift
+//  FetchProductsUseCaseTests.swift
 //  TestsExampleTests
 //
 //  Created by Hugo A. Rosado on 19/11/23.
@@ -9,40 +9,40 @@
 import Cuckoo
 import XCTest
 
-final class FetchCouponsUseCaseTests: XCTestCase {
+final class FetchProductsUseCaseTests: XCTestCase {
 
-    private let repository = MockCouponRepository()
-    private let mapper = MockCouponDomainMapper()
-    private lazy var useCase: FetchCouponsUseCase = {
+    private let repository = MockProductRepository()
+    private let mapper = MockProductDomainMapper()
+    private lazy var useCase: FetchProductsUseCase = {
         .init(repository: repository, mapper: mapper)
     }()
 
     override func setUpWithError() throws {
         stub(repository) { stub in
-            when(stub).fetchCoupons(any()).thenDoNothing()
+            when(stub).fetchProducts(any()).thenDoNothing()
         }
         stub(mapper) { stub in
             when(stub).domainToPresentation(
-                equal(to: [CouponFactory.newDomainCoupon()])
-            ).thenReturn([CouponFactory.newUiCoupon()])
+                equal(to: [ProductFactory.newDomainProduct()])
+            ).thenReturn([ProductFactory.newUiProduct()])
         }
     }
 
     func test_execute_success() throws {
         // Arrange
-        typealias UseCaseResult = CaseResult<[UiCoupon], Error>
-        typealias RepositoryResult = CaseResult<[DomainCoupon], Error>
+        typealias UseCaseResult = CaseResult<[UiProduct], Error>
+        typealias RepositoryResult = CaseResult<[DomainProduct], Error>
         let captor = ArgumentCaptor<(RepositoryResult) -> Void>()
-        let expected = UseCaseResult.success(data: [CouponFactory.newUiCoupon()])
+        let expected = UseCaseResult.success(data: [ProductFactory.newUiProduct()])
         let repositoryExpected = RepositoryResult.success(
-            data: [CouponFactory.newDomainCoupon()])
+            data: [ProductFactory.newDomainProduct()])
         var result: UseCaseResult?
         // Act
         useCase.execute { response in
             result = response
         }
         // Assert
-        verify(repository).fetchCoupons(captor.capture())
+        verify(repository).fetchProducts(captor.capture())
         captor.value?(repositoryExpected)
         XCTAssertTrue(result?.isEqual(expected) == true)
     }
