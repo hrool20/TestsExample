@@ -81,7 +81,6 @@
 		F3C765EA2B071AB3002DDAFC /* TestsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */; };
 		F3C765EC2B071AB4002DDAFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C765EB2B071AB4002DDAFC /* Assets.xcassets */; };
 		F3C765EF2B071AB4002DDAFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C765ED2B071AB4002DDAFC /* LaunchScreen.storyboard */; };
-		F3C765FA2B071AB5002DDAFC /* TestsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C765F92B071AB5002DDAFC /* TestsExampleTests.swift */; };
 		F3C766042B071AB5002DDAFC /* TestsExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766032B071AB5002DDAFC /* TestsExampleUITests.swift */; };
 		F3C766062B071AB5002DDAFC /* TestsExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766052B071AB5002DDAFC /* TestsExampleUITestsLaunchTests.swift */; };
 		F3C766172B072456002DDAFC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766162B072456002DDAFC /* String+Extension.swift */; };
@@ -113,6 +112,9 @@
 		F3F0F28E2B0AE7D0004FCD05 /* CouponRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F28D2B0AE7D0004FCD05 /* CouponRepositoryTests.swift */; };
 		F3F0F2922B0AEEC3004FCD05 /* CouponFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2912B0AEEC3004FCD05 /* CouponFactory.swift */; };
 		F3F0F2952B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2942B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift */; };
+		F3F0F2992B0AF870004FCD05 /* FetchCouponsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2982B0AF870004FCD05 /* FetchCouponsUseCaseTests.swift */; };
+		F3F0F29D2B0B0B8B004FCD05 /* CouponsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F29C2B0B0B8B004FCD05 /* CouponsViewModelTests.swift */; };
+		F3F0F2A02B0B0EC2004FCD05 /* TestableObserver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F29F2B0B0EC2004FCD05 /* TestableObserver+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,7 +207,6 @@
 		F3C765EE2B071AB4002DDAFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3C765F02B071AB4002DDAFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3C765F52B071AB5002DDAFC /* TestsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3C765F92B071AB5002DDAFC /* TestsExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExampleTests.swift; sourceTree = "<group>"; };
 		F3C765FF2B071AB5002DDAFC /* TestsExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestsExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C766032B071AB5002DDAFC /* TestsExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExampleUITests.swift; sourceTree = "<group>"; };
 		F3C766052B071AB5002DDAFC /* TestsExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -236,6 +237,9 @@
 		F3F0F28D2B0AE7D0004FCD05 /* CouponRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponRepositoryTests.swift; sourceTree = "<group>"; };
 		F3F0F2912B0AEEC3004FCD05 /* CouponFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponFactory.swift; sourceTree = "<group>"; };
 		F3F0F2942B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponRemoteDataSourceTests.swift; sourceTree = "<group>"; };
+		F3F0F2982B0AF870004FCD05 /* FetchCouponsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCouponsUseCaseTests.swift; sourceTree = "<group>"; };
+		F3F0F29C2B0B0B8B004FCD05 /* CouponsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewModelTests.swift; sourceTree = "<group>"; };
+		F3F0F29F2B0B0EC2004FCD05 /* TestableObserver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestableObserver+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -739,11 +743,11 @@
 		F3C766122B072258002DDAFC /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
-				F3B59A812B0A8E6F00E421BD /* Coupon */,
 				F3C766142B07236C002DDAFC /* Core */,
+				F3B59A812B0A8E6F00E421BD /* Coupon */,
 				F3B59A332B09BF7F00E421BD /* MainTabBar */,
-				F3C766182B0724FB002DDAFC /* Splash */,
 				F3B59A462B09CED000E421BD /* Product */,
+				F3C766182B0724FB002DDAFC /* Splash */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -917,7 +921,6 @@
 				F3F0F27C2B0ADE00004FCD05 /* Core */,
 				F3F0F28A2B0AE747004FCD05 /* Coupon */,
 				F3F0F2902B0AEEAF004FCD05 /* Factory */,
-				F3C765F92B071AB5002DDAFC /* TestsExampleTests.swift */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -925,6 +928,7 @@
 		F3F0F27C2B0ADE00004FCD05 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F3F0F29E2B0B0E8C004FCD05 /* Extensions */,
 				F3F0F2802B0ADFF5004FCD05 /* Domain */,
 				F3F0F27D2B0ADE0A004FCD05 /* Presentation */,
 			);
@@ -952,6 +956,8 @@
 			isa = PBXGroup;
 			children = (
 				F3F0F28B2B0AE760004FCD05 /* Data */,
+				F3F0F2962B0AF82B004FCD05 /* Domain */,
+				F3F0F29A2B0B0B51004FCD05 /* Presentation */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -987,6 +993,46 @@
 				F3F0F2942B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		F3F0F2962B0AF82B004FCD05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2972B0AF85A004FCD05 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F3F0F2972B0AF85A004FCD05 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2982B0AF870004FCD05 /* FetchCouponsUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F3F0F29A2B0B0B51004FCD05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F29B2B0B0B61004FCD05 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3F0F29B2B0B0B61004FCD05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F29C2B0B0B8B004FCD05 /* CouponsViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3F0F29E2B0B0E8C004FCD05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F29F2B0B0EC2004FCD05 /* TestableObserver+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1252,7 +1298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C765FA2B071AB5002DDAFC /* TestsExampleTests.swift in Sources */,
+				F3F0F2A02B0B0EC2004FCD05 /* TestableObserver+Extension.swift in Sources */,
+				F3F0F29D2B0B0B8B004FCD05 /* CouponsViewModelTests.swift in Sources */,
+				F3F0F2992B0AF870004FCD05 /* FetchCouponsUseCaseTests.swift in Sources */,
 				F3F0F2922B0AEEC3004FCD05 /* CouponFactory.swift in Sources */,
 				F3F0F28E2B0AE7D0004FCD05 /* CouponRepositoryTests.swift in Sources */,
 				F3F0F2832B0AE021004FCD05 /* TestUseCase.swift in Sources */,

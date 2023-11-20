@@ -22,9 +22,9 @@ final class CouponRepositoryTests: XCTestCase {
             when(stub.fetchCoupons(any())).thenDoNothing()
         }
         stub(mapper) { stub in
-            when(stub.dataToDomain(
+            when(stub).dataToDomain(
                 equal(to: [CouponFactory.newApiCoupon()])
-            )).thenReturn([CouponFactory.newDomainCoupon()])
+            ).thenReturn([CouponFactory.newDomainCoupon()])
         }
     }
 
