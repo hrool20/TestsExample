@@ -715,8 +715,8 @@
 			isa = PBXGroup;
 			children = (
 				F3F0F27B2B0ADDF1004FCD05 /* AppModules */,
-				F3F0F2772B0ADCB7004FCD05 /* GenerateMockFiles.sh */,
 				F3F0F2792B0ADDAA004FCD05 /* GeneratedMocks.swift */,
+				F3F0F2772B0ADCB7004FCD05 /* GenerateMockFiles.sh */,
 			);
 			path = TestsExampleTests;
 			sourceTree = "<group>";

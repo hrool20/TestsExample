@@ -39,3 +39,7 @@ node_modules/
 Packages/
 Package.pins
 Package.resolved
+
+# Cuckoo
+#
+cuckoo_generator

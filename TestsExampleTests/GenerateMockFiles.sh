@@ -11,4 +11,14 @@ INPUT_DIR="${PROJECT_DIR}/${PROJECT_NAME}"
 --no-timestamp \
 "${INPUT_DIR}/AppModules/Coupon/Data/DataSource/CouponRemoteDataSource.swift" \
 "${INPUT_DIR}/AppModules/Coupon/Data/Mapper/CouponDataMapper.swift" \
-"${INPUT_DIR}/AppModules/Coupon/Data/Repository/CouponRepository.swift"
+"${INPUT_DIR}/AppModules/Coupon/Data/Repository/CouponRepository.swift" \
+"${INPUT_DIR}/AppModules/Coupon/Domain/Mapper/CouponDomainMapper.swift" \
+"${INPUT_DIR}/AppModules/Core/Data/LocalStorage/LocalStorage.swift" \
+"${INPUT_DIR}/AppModules/Core/Domain/UseCase/AnyClosureUseCase.swift" \
+"${INPUT_DIR}/AppModules/Core/Domain/UseCase/AnyUseCase.swift" \
+"${INPUT_DIR}/AppModules/Core/Utils/NotificationCenterWrapper.swift" \
+"${INPUT_DIR}/AppModules/Product/Data/DataSource/ProductRemoteDataSource.swift" \
+"${INPUT_DIR}/AppModules/Product/Data/Mapper/ProductDataMapper.swift" \
+"${INPUT_DIR}/AppModules/Product/Data/Repository/ProductRepository.swift" \
+"${INPUT_DIR}/AppModules/Product/Domain/Mapper/ProductDomainMapper.swift" \
+"${INPUT_DIR}/AppModules/Product/Presentation/Mapper/ProductPresentationMapper.swift"
