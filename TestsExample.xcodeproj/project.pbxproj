@@ -104,6 +104,12 @@
 		F3C766612B079D13002DDAFC /* SplashModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766602B079D13002DDAFC /* SplashModule.swift */; };
 		F3C766642B07C92C002DDAFC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766632B07C92C002DDAFC /* SplashViewModel.swift */; };
 		F3C766682B07CA28002DDAFC /* Resolver+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */; };
+		F3F0F2762B0ADB39004FCD05 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F3F0F2752B0ADB39004FCD05 /* SDWebImage */; };
+		F3F0F27A2B0ADDAA004FCD05 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2792B0ADDAA004FCD05 /* GeneratedMocks.swift */; };
+		F3F0F27F2B0ADE34004FCD05 /* RxTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F27E2B0ADE34004FCD05 /* RxTestCase.swift */; };
+		F3F0F2832B0AE021004FCD05 /* TestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2822B0AE021004FCD05 /* TestUseCase.swift */; };
+		F3F0F2852B0AE057004FCD05 /* TestClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2842B0AE057004FCD05 /* TestClosureUseCase.swift */; };
+		F3F0F2882B0AE0FA004FCD05 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = F3F0F2872B0AE0FA004FCD05 /* Cuckoo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +224,12 @@
 		F3C766602B079D13002DDAFC /* SplashModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModule.swift; sourceTree = "<group>"; };
 		F3C766632B07C92C002DDAFC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		F3C766672B07CA28002DDAFC /* Resolver+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Extension.swift"; sourceTree = "<group>"; };
+		F3F0F2732B0ADA79004FCD05 /* TestsExample.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestsExample.xctestplan; sourceTree = "<group>"; };
+		F3F0F2772B0ADCB7004FCD05 /* GenerateMockFiles.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GenerateMockFiles.sh; sourceTree = "<group>"; };
+		F3F0F2792B0ADDAA004FCD05 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		F3F0F27E2B0ADE34004FCD05 /* RxTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTestCase.swift; sourceTree = "<group>"; };
+		F3F0F2822B0AE021004FCD05 /* TestUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUseCase.swift; sourceTree = "<group>"; };
+		F3F0F2842B0AE057004FCD05 /* TestClosureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClosureUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +249,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F0F2762B0ADB39004FCD05 /* SDWebImage in Frameworks */,
 				F3B59AC32B0AC62E00E421BD /* RxTest in Frameworks */,
+				F3F0F2882B0AE0FA004FCD05 /* Cuckoo in Frameworks */,
 				F3B59ABB2B0AC62E00E421BD /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,10 +681,12 @@
 		F3C765D32B071AB3002DDAFC = {
 			isa = PBXGroup;
 			children = (
+				F3F0F2732B0ADA79004FCD05 /* TestsExample.xctestplan */,
 				F3C765DE2B071AB3002DDAFC /* TestsExample */,
 				F3C765F82B071AB5002DDAFC /* TestsExampleTests */,
 				F3C766022B071AB5002DDAFC /* TestsExampleUITests */,
 				F3C765DD2B071AB3002DDAFC /* Products */,
+				F3F0F2742B0ADB39004FCD05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -698,7 +714,9 @@
 		F3C765F82B071AB5002DDAFC /* TestsExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				F3C765F92B071AB5002DDAFC /* TestsExampleTests.swift */,
+				F3F0F27B2B0ADDF1004FCD05 /* AppModules */,
+				F3F0F2772B0ADCB7004FCD05 /* GenerateMockFiles.sh */,
+				F3F0F2792B0ADDAA004FCD05 /* GeneratedMocks.swift */,
 			);
 			path = TestsExampleTests;
 			sourceTree = "<group>";
@@ -880,6 +898,48 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F3F0F2742B0ADB39004FCD05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3F0F27B2B0ADDF1004FCD05 /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F27C2B0ADE00004FCD05 /* Core */,
+				F3C765F92B071AB5002DDAFC /* TestsExampleTests.swift */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		F3F0F27C2B0ADE00004FCD05 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2802B0ADFF5004FCD05 /* Domain */,
+				F3F0F27D2B0ADE0A004FCD05 /* Presentation */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F3F0F27D2B0ADE0A004FCD05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F27E2B0ADE34004FCD05 /* RxTestCase.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3F0F2802B0ADFF5004FCD05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2822B0AE021004FCD05 /* TestUseCase.swift */,
+				F3F0F2842B0AE057004FCD05 /* TestClosureUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -911,6 +971,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3C7660C2B071AB5002DDAFC /* Build configuration list for PBXNativeTarget "TestsExampleTests" */;
 			buildPhases = (
+				F3F0F2782B0ADD4B004FCD05 /* Cuckoo */,
 				F3C765F12B071AB5002DDAFC /* Sources */,
 				F3C765F22B071AB5002DDAFC /* Frameworks */,
 				F3C765F32B071AB5002DDAFC /* Resources */,
@@ -924,6 +985,8 @@
 			packageProductDependencies = (
 				F3B59ABA2B0AC62E00E421BD /* RxBlocking */,
 				F3B59AC22B0AC62E00E421BD /* RxTest */,
+				F3F0F2752B0ADB39004FCD05 /* SDWebImage */,
+				F3F0F2872B0AE0FA004FCD05 /* Cuckoo */,
 			);
 			productName = TestsExampleTests;
 			productReference = F3C765F52B071AB5002DDAFC /* TestsExampleTests.xctest */;
@@ -983,6 +1046,7 @@
 				F3C7662B2B073106002DDAFC /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				F3C7662E2B073118002DDAFC /* XCRemoteSwiftPackageReference "Swinject" */,
 				F3B59AB92B0AC62E00E421BD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F3F0F2862B0AE0FA004FCD05 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 			);
 			productRefGroup = F3C765DD2B071AB3002DDAFC /* Products */;
 			projectDirPath = "";
@@ -1020,6 +1084,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3F0F2782B0ADD4B004FCD05 /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh $SRCROOT/TestsExampleTests/GenerateMockFiles.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3C765D82B071AB3002DDAFC /* Sources */ = {
@@ -1119,6 +1204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C765FA2B071AB5002DDAFC /* TestsExampleTests.swift in Sources */,
+				F3F0F2832B0AE021004FCD05 /* TestUseCase.swift in Sources */,
+				F3F0F27A2B0ADDAA004FCD05 /* GeneratedMocks.swift in Sources */,
+				F3F0F27F2B0ADE34004FCD05 /* RxTestCase.swift in Sources */,
+				F3F0F2852B0AE057004FCD05 /* TestClosureUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1466,6 +1555,14 @@
 				version = 2.8.4;
 			};
 		};
+		F3F0F2862B0AE0FA004FCD05 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo";
+			requirement = {
+				kind = exactVersion;
+				version = 1.10.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1503,6 +1600,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F3C7662E2B073118002DDAFC /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		F3F0F2752B0ADB39004FCD05 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C7662B2B073106002DDAFC /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F3F0F2872B0AE0FA004FCD05 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3F0F2862B0AE0FA004FCD05 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
 		};
 /* End XCSwiftPackageProductDependency section */
 
