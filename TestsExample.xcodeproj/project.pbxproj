@@ -119,6 +119,8 @@
 		F3F0F2A72B0B1636004FCD05 /* ProductFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2A62B0B1636004FCD05 /* ProductFactory.swift */; };
 		F3F0F2AA2B0B18C2004FCD05 /* ProductRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2A92B0B18C2004FCD05 /* ProductRemoteDataSourceTests.swift */; };
 		F3F0F2AE2B0B199E004FCD05 /* FetchProductsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2AD2B0B199E004FCD05 /* FetchProductsUseCaseTests.swift */; };
+		F3F0F2B22B0B1B56004FCD05 /* ProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2B12B0B1B56004FCD05 /* ProductsViewModelTests.swift */; };
+		F3F0F2B72B0B1FD5004FCD05 /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0F2B62B0B1FD5004FCD05 /* SplashViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +250,8 @@
 		F3F0F2A62B0B1636004FCD05 /* ProductFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFactory.swift; sourceTree = "<group>"; };
 		F3F0F2A92B0B18C2004FCD05 /* ProductRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSourceTests.swift; sourceTree = "<group>"; };
 		F3F0F2AD2B0B199E004FCD05 /* FetchProductsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProductsUseCaseTests.swift; sourceTree = "<group>"; };
+		F3F0F2B12B0B1B56004FCD05 /* ProductsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModelTests.swift; sourceTree = "<group>"; };
+		F3F0F2B62B0B1FD5004FCD05 /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -926,6 +930,7 @@
 		F3F0F27B2B0ADDF1004FCD05 /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
+				F3F0F2B32B0B1FBD004FCD05 /* Splash */,
 				F3F0F27C2B0ADE00004FCD05 /* Core */,
 				F3F0F28A2B0AE747004FCD05 /* Coupon */,
 				F3F0F2902B0AEEAF004FCD05 /* Factory */,
@@ -1048,8 +1053,9 @@
 		F3F0F2A12B0B1556004FCD05 /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				F3F0F2AB2B0B1986004FCD05 /* Domain */,
 				F3F0F2A22B0B155F004FCD05 /* Data */,
+				F3F0F2AB2B0B1986004FCD05 /* Domain */,
+				F3F0F2AF2B0B1B3C004FCD05 /* Presentation */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -1093,6 +1099,46 @@
 				F3F0F2AD2B0B199E004FCD05 /* FetchProductsUseCaseTests.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F3F0F2AF2B0B1B3C004FCD05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2B02B0B1B44004FCD05 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3F0F2B02B0B1B44004FCD05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2B12B0B1B56004FCD05 /* ProductsViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3F0F2B32B0B1FBD004FCD05 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2B42B0B1FC3004FCD05 /* Presentation */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F3F0F2B42B0B1FC3004FCD05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2B52B0B1FC8004FCD05 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F3F0F2B52B0B1FC8004FCD05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0F2B62B0B1FD5004FCD05 /* SplashViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1361,6 +1407,7 @@
 				F3F0F2AA2B0B18C2004FCD05 /* ProductRemoteDataSourceTests.swift in Sources */,
 				F3F0F2A02B0B0EC2004FCD05 /* TestableObserver+Extension.swift in Sources */,
 				F3F0F2AE2B0B199E004FCD05 /* FetchProductsUseCaseTests.swift in Sources */,
+				F3F0F2B22B0B1B56004FCD05 /* ProductsViewModelTests.swift in Sources */,
 				F3F0F29D2B0B0B8B004FCD05 /* CouponsViewModelTests.swift in Sources */,
 				F3F0F2992B0AF870004FCD05 /* FetchCouponsUseCaseTests.swift in Sources */,
 				F3F0F2A52B0B157E004FCD05 /* ProductRepositoryTests.swift in Sources */,
@@ -1372,6 +1419,7 @@
 				F3F0F27F2B0ADE34004FCD05 /* RxTestCase.swift in Sources */,
 				F3F0F2952B0AF678004FCD05 /* CouponRemoteDataSourceTests.swift in Sources */,
 				F3F0F2852B0AE057004FCD05 /* TestClosureUseCase.swift in Sources */,
+				F3F0F2B72B0B1FD5004FCD05 /* SplashViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

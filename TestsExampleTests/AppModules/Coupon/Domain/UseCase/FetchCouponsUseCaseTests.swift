@@ -28,7 +28,7 @@ final class FetchCouponsUseCaseTests: XCTestCase {
         }
     }
 
-    func test_fetchCoupons_success() throws {
+    func test_execute_success() throws {
         // Arrange
         typealias UseCaseResult = CaseResult<[UiCoupon], Error>
         typealias RepositoryResult = CaseResult<[DomainCoupon], Error>
