@@ -11,27 +11,32 @@ import XCTest
 
 final class ProductRemoteDataSourceTests: XCTestCase {
 
-    private var remote: ProductRemoteDataSource = {
-        ProductRemoteDataSourceImpl()
+    private let manager = MockNetworkManager()
+    private lazy var remote: ProductRemoteDataSource = {
+        ProductRemoteDataSourceImpl(manager: manager)
     }()
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        stub(manager) { stub in
+            when(stub).request(
+                count: any(), any(), any(((CaseResult<[ApiProduct], Error>) -> Void).self)
+            ).thenDoNothing()
+        }
     }
 
     func test_fetchProducts_success() throws {
         // Arrange
-        typealias RemoteResult = CaseResult<[ApiProduct], Error>
-        let captor = ArgumentCaptor<(RemoteResult) -> Void>()
-        let expected = RemoteResult.success(data: [ProductFactory.newApiProduct()])
-        var result: RemoteResult?
+        typealias NetworkResult = CaseResult<[ApiProduct], Error>
+        let captor = ArgumentCaptor<(NetworkResult) -> Void>()
+        let expected = NetworkResult.success(data: [ProductFactory.newApiProduct()])
+        var result: NetworkResult?
         // Act
         remote.fetchProducts { response in
             result = response
         }
         // Assert
-//        verify(remote).fetchProducts(captor.capture())
-//        captor.value?(remoteExpected)
+        verify(manager).request(count: any(), any(), captor.capture())
+        captor.value?(expected)
         XCTAssertTrue(result?.isEqual(expected) == true)
     }
 

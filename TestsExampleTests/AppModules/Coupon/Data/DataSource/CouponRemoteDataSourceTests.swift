@@ -11,27 +11,32 @@ import XCTest
 
 final class CouponRemoteDataSourceTests: XCTestCase {
 
-    private var remote: CouponRemoteDataSource = {
-        CouponRemoteDataSourceImpl()
+    private let manager = MockNetworkManager()
+    private lazy var remote: CouponRemoteDataSource = {
+        CouponRemoteDataSourceImpl(manager: manager)
     }()
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        stub(manager) { stub in
+            when(stub).request(
+                count: any(), any(), any(((CaseResult<[ApiCoupon], Error>) -> Void).self)
+            ).thenDoNothing()
+        }
     }
 
     func test_fetchCoupons_success() throws {
         // Arrange
-        typealias RemoteResult = CaseResult<[ApiCoupon], Error>
-        let captor = ArgumentCaptor<(RemoteResult) -> Void>()
-        let expected = RemoteResult.success(data: [CouponFactory.newApiCoupon()])
-        var result: RemoteResult?
+        typealias NetworkResult = CaseResult<[ApiCoupon], Error>
+        let captor = ArgumentCaptor<(NetworkResult) -> Void>()
+        let expected = NetworkResult.success(data: [CouponFactory.newApiCoupon()])
+        var result: NetworkResult?
         // Act
         remote.fetchCoupons { response in
             result = response
         }
         // Assert
-//        verify(remote).fetchCoupons(captor.capture())
-//        captor.value?(remoteExpected)
+        verify(manager).request(count: any(), any(), captor.capture())
+        captor.value?(expected)
         XCTAssertTrue(result?.isEqual(expected) == true)
     }
 

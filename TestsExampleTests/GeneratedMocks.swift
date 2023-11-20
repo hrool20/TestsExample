@@ -284,6 +284,139 @@ import Foundation
 
 
 
+// MARK: - Mocks generated from file: TestsExample/AppModules/Core/Data/Network/NetworkManager.swift
+//
+//  NetworkManager.swift
+//  TestsExample
+//
+//  Created by Hugo A. Rosado on 20/11/23.
+//
+
+import Cuckoo
+@testable import TestsExample
+
+import Foundation
+
+
+
+
+
+
+ class MockNetworkManager: NetworkManager, Cuckoo.ProtocolMock {
+    
+     typealias MocksType = NetworkManager
+    
+     typealias Stubbing = __StubbingProxy_NetworkManager
+     typealias Verification = __VerificationProxy_NetworkManager
+
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    
+    private var __defaultImplStub: NetworkManager?
+
+     func enableDefaultImplementation(_ stub: NetworkManager) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+    
+
+    
+
+    
+
+    
+    
+    
+    
+     func request<T, E>(count: Int, _ get: @escaping (Int) -> T, _ onCompletion: @escaping (CaseResult<[T], E>) -> Void)  {
+        
+    return cuckoo_manager.call(
+    """
+    request(count: Int, _: @escaping (Int) -> T, _: @escaping (CaseResult<[T], E>) -> Void)
+    """,
+            parameters: (count, get, onCompletion),
+            escapingParameters: (count, get, onCompletion),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.request(count: count, get, onCompletion))
+        
+    }
+    
+    
+
+     struct __StubbingProxy_NetworkManager: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+    
+         init(manager: Cuckoo.MockManager) {
+            self.cuckoo_manager = manager
+        }
+        
+        
+        
+        
+        func request<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable, T, E>(count: M1, _ get: M2, _ onCompletion: M3) -> Cuckoo.ProtocolStubNoReturnFunction<(Int, (Int) -> T, (CaseResult<[T], E>) -> Void)> where M1.MatchedType == Int, M2.MatchedType == (Int) -> T, M3.MatchedType == (CaseResult<[T], E>) -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(Int, (Int) -> T, (CaseResult<[T], E>) -> Void)>] = [wrap(matchable: count) { $0.0 }, wrap(matchable: get) { $0.1 }, wrap(matchable: onCompletion) { $0.2 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockNetworkManager.self, method:
+    """
+    request(count: Int, _: @escaping (Int) -> T, _: @escaping (CaseResult<[T], E>) -> Void)
+    """, parameterMatchers: matchers))
+        }
+        
+        
+    }
+
+     struct __VerificationProxy_NetworkManager: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+    
+         init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            self.cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+    
+        
+    
+        
+        
+        
+        @discardableResult
+        func request<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable, T, E>(count: M1, _ get: M2, _ onCompletion: M3) -> Cuckoo.__DoNotUse<(Int, (Int) -> T, (CaseResult<[T], E>) -> Void), Void> where M1.MatchedType == Int, M2.MatchedType == (Int) -> T, M3.MatchedType == (CaseResult<[T], E>) -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(Int, (Int) -> T, (CaseResult<[T], E>) -> Void)>] = [wrap(matchable: count) { $0.0 }, wrap(matchable: get) { $0.1 }, wrap(matchable: onCompletion) { $0.2 }]
+            return cuckoo_manager.verify(
+    """
+    request(count: Int, _: @escaping (Int) -> T, _: @escaping (CaseResult<[T], E>) -> Void)
+    """, callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
+        
+    }
+}
+
+
+ class NetworkManagerStub: NetworkManager {
+    
+
+    
+
+    
+    
+    
+    
+     func request<T, E>(count: Int, _ get: @escaping (Int) -> T, _ onCompletion: @escaping (CaseResult<[T], E>) -> Void)   {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+    
+}
+
+
+
+
+
 // MARK: - Mocks generated from file: TestsExample/AppModules/Core/Domain/UseCase/AnyClosureUseCase.swift
 //
 //  AnyClosureUseCase.swift
