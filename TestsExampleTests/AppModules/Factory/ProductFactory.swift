@@ -50,11 +50,12 @@ enum ProductFactory {
     }
 
     static func newUiProductItem(_ i: Int = 1) -> UiProductItem {
-        .init(
-            brand: "brand \(i)",
-            name: "name \(i)",
-            description: "description \(i)",
-            price: "price \(i)",
-            imageUrl: "imageUrl \(i)")
+        let value = newUiProduct(i)
+        return .init(
+            brand: value.brand,
+            name: "\(value.name) - \(value.unit)",
+            description: value.description,
+            price: "\(value.price)",
+            imageUrl: value.images.first)
     }
 }
