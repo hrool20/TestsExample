@@ -50,15 +50,17 @@ extension CaseResult {
     }
 
     func isEqual(
-        _ result: CaseResult<T, E>?
-    ) -> Bool where T: Equatable, E: Equatable {
+        _ result: CaseResult<T, E>?,
+        _ transform: @escaping(T, T) -> Bool,
+        _ handle: @escaping(E, E) -> Bool
+    ) -> Bool {
         switch (self, result) {
         case let (.success(data1), .success(data2)):
-            return data1 == data2
+            return transform(data1, data2)
         case let (.error(type1), .error(type2)):
             switch (type1, type2) {
             case let (.api(apiError1), .api(apiError2)):
-                return apiError1 == apiError2
+                return handle(apiError1, apiError2)
             case (.connection, .connection):
                 return true
             case let (.general(error1), .general(error2)):
@@ -71,5 +73,17 @@ extension CaseResult {
         default:
             return false
         }
+    }
+
+    func isEqual(
+        _ result: CaseResult<T, E>?
+    ) -> Bool where T: Equatable, E: Equatable {
+        isEqual(result, { $0 == $1 }, { $0 == $1 })
+    }
+
+    func isEqual(
+        _ result: CaseResult<T, E>?
+    ) -> Bool where T: Equatable, E: Error {
+        isEqual(result, { $0 == $1 }, { ($0 as NSError).domain == ($1 as NSError).domain })
     }
 }
