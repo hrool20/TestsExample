@@ -11,6 +11,7 @@ final class SplashViewController: BaseViewController<SplashViewModel> {
 
     private enum Constants {
         static let backgroundColor: UIColor = .white
+        static let title: String = .init(localized: "This_is_testing_app")
         enum Label {
             enum Title {
                 static let font: UIFont = .boldSystemFont(ofSize: 18.0)
@@ -57,7 +58,7 @@ final class SplashViewController: BaseViewController<SplashViewModel> {
         titleLabel.font = Constants.Label.Title.font
         titleLabel.textAlignment = .center
         titleLabel.textColor = Constants.Label.Title.textColor
-        titleLabel.text = "This is a test app"
+        titleLabel.text = Constants.title
         activityIndicator.color = Constants.Label.Title.textColor
         activityIndicator.startAnimating()
         setupConstraints()
