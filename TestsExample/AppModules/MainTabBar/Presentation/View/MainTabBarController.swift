@@ -11,11 +11,11 @@ final class MainTabBarController: BaseTabBarController<MainTabBarViewModel> {
 
     private enum Constants {
         static let couponsImage: UIImage = .add
-        static let couponsTitle: String = "Cupones"
+        static let couponsTitle: String = .init(localized: "coupons")
         static let productsImage: UIImage = .actions
-        static let productsTitle: String = "Productos"
+        static let productsTitle: String = .init(localized: "products")
         static let profileImage: UIImage = .remove
-        static let profileTitle: String = "Mi perfil"
+        static let profileTitle: String = .init(localized: "My_profile")
     }
 
     override func viewDidLoad() {

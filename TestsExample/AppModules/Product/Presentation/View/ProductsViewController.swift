@@ -11,6 +11,7 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
 
     private enum Constants {
         static let backgroundColor: UIColor = .white
+        static let title: String = .init(localized: "list_using_table_view")
         enum TableView {
             static let backgroundColor: UIColor = .clear
             static let contentInset: UIEdgeInsets = .init(
@@ -35,7 +36,7 @@ final class ProductsViewController: BaseViewController<ProductsViewModel> {
     }
 
     private func setupUI() {
-        navigationItem.title = "Lista usando table view"
+        navigationItem.title = Constants.title
         view.backgroundColor = Constants.backgroundColor
         tableView.delegate = self
         tableView.dataSource = self

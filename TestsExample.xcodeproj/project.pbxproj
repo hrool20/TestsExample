@@ -20,6 +20,7 @@
 		8E6023B32B2676CD002C7818 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A92B2676CD002C7818 /* RethinkSans-Medium.ttf */; };
 		8E6023B42B2676CD002C7818 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */; };
 		8E6023B62B267747002C7818 /* XCFonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6023B52B267747002C7818 /* XCFonts+Generated.swift */; };
+		8E6023B82B267A43002C7818 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023B72B267A43002C7818 /* Localizable.xcstrings */; };
 		F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73182B07D32200FC13B1 /* CoreModule.swift */; };
 		F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731A2B07D35900FC13B1 /* BaseModule.swift */; };
 		F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */; };
@@ -174,6 +175,7 @@
 		8E6023A92B2676CD002C7818 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
 		8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		8E6023B52B267747002C7818 /* XCFonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCFonts+Generated.swift"; sourceTree = "<group>"; };
+		8E6023B72B267A43002C7818 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
@@ -849,6 +851,7 @@
 				F3C765EB2B071AB4002DDAFC /* Assets.xcassets */,
 				F3C765F02B071AB4002DDAFC /* Info.plist */,
 				F3C765ED2B071AB4002DDAFC /* LaunchScreen.storyboard */,
+				8E6023B72B267A43002C7818 /* Localizable.xcstrings */,
 				F3C765E82B071AB3002DDAFC /* TestsExample.xcdatamodeld */,
 			);
 			path = Resources;
@@ -1366,6 +1369,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = F3C765D32B071AB3002DDAFC;
 			packageReferences = (
@@ -1403,6 +1407,7 @@
 				8E6023AB2B2676CD002C7818 /* RethinkSans-MediumItalic.ttf in Resources */,
 				8E6023B12B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf in Resources */,
 				8E60239A2B26723B002C7818 /* swiftgen.yml in Resources */,
+				8E6023B82B267A43002C7818 /* Localizable.xcstrings in Resources */,
 				8E6023B22B2676CD002C7818 /* RethinkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1674,6 +1679,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1728,6 +1734,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

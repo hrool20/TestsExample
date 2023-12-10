@@ -11,6 +11,7 @@ final class CouponsViewController: BaseViewController<CouponsViewModel> {
 
     private enum Constants {
         static let backgroundColor: UIColor = .white
+        static let title: String = .init(localized: "list_using_collection_view")
         enum CollectionView {
             static let backgroundColor: UIColor = .clear
             static let contentInset: UIEdgeInsets = .init(
@@ -38,7 +39,7 @@ final class CouponsViewController: BaseViewController<CouponsViewModel> {
     }
 
     private func setupUI() {
-        navigationItem.title = "Lista usando table view"
+        navigationItem.title = Constants.title
         view.backgroundColor = Constants.backgroundColor
         collectionView.dataSource = self
         collectionView.delegate = self
