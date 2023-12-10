@@ -32,5 +32,8 @@ extension CoreModule {
                 codableHelper: resolver.load(CodableHelper.self)
             )
         }.inObjectScope(.container)
+        container.register(NetworkManager.self) { _ in
+            NetworkManagerImpl()
+        }
     }
 }

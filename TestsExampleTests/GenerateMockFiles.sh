@@ -14,6 +14,7 @@ INPUT_DIR="${PROJECT_DIR}/${PROJECT_NAME}"
 "${INPUT_DIR}/AppModules/Coupon/Data/Repository/CouponRepository.swift" \
 "${INPUT_DIR}/AppModules/Coupon/Domain/Mapper/CouponDomainMapper.swift" \
 "${INPUT_DIR}/AppModules/Core/Data/LocalStorage/LocalStorage.swift" \
+"${INPUT_DIR}/AppModules/Core/Data/Network/NetworkManager.swift" \
 "${INPUT_DIR}/AppModules/Core/Domain/UseCase/AnyClosureUseCase.swift" \
 "${INPUT_DIR}/AppModules/Core/Domain/UseCase/AnyUseCase.swift" \
 "${INPUT_DIR}/AppModules/Core/Utils/NotificationCenterWrapper.swift" \

@@ -12,8 +12,10 @@ final class ProductModule: BaseModule {
         container.register(ProductDataMapper.self) { _ in
             ProductDataMapperImpl()
         }
-        container.register(ProductRemoteDataSource.self) { _ in
-            ProductRemoteDataSourceImpl()
+        container.register(ProductRemoteDataSource.self) { resolver in
+            ProductRemoteDataSourceImpl(
+                manager: resolver.load(NetworkManager.self)
+            )
         }
         container.register(ProductRepository.self) { resolver in
             ProductRepositoryImpl(

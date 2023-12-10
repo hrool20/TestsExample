@@ -12,8 +12,10 @@ final class CouponModule: BaseModule {
         container.register(CouponDataMapper.self) { _ in
             CouponDataMapperImpl()
         }
-        container.register(CouponRemoteDataSource.self) { _ in
-            CouponRemoteDataSourceImpl()
+        container.register(CouponRemoteDataSource.self) { resolver in
+            CouponRemoteDataSourceImpl(
+                manager: resolver.load(NetworkManager.self)
+            )
         }
         container.register(CouponRepository.self) { resolver in
             CouponRepositoryImpl(

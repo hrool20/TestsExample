@@ -8,6 +8,12 @@
 import Foundation
 
 final class ProductRemoteDataSourceImpl: ProductRemoteDataSource {
+    private let manager: NetworkManager
+
+    init(manager: NetworkManager) {
+        self.manager = manager
+    }
+
     func fetchProducts(_ onCompletion: @escaping (CaseResult<[ApiProduct], Error>) -> Void) {
         let images = [
             "https://wallpapers.com/images/hd/vertical-pictures-r93cdchwdse79vvv.jpg",
@@ -19,15 +25,11 @@ final class ProductRemoteDataSourceImpl: ProductRemoteDataSource {
             "https://upload.wikimedia.org/wikipedia/commons/9/91/F-15_vertical_deploy.jpg",
             "https://w0.peakpx.com/wallpaper/300/911/HD-wallpaper-dark-vertical-black-thumbnail.jpg"
         ]
-        var array = [ApiProduct]()
-        for i in 1...[5, 10, 20].randomElement()! {
-            array.append(.init(
+        manager.request(count: [5, 10, 20].randomElement()!, { i in
+            ApiProduct(
                 id: "\(i)", itemId: "ref-\(i)", name: "Product \(i)", description: "This is a description",
                 brand: "Brand \(i)", sku: "SKU-\(i)", price: 1000.123, unit: ["un", "kg", "lt"].randomElement()!,
-                images: images.shuffled()))
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-            onCompletion(.success(data: array))
-        }
+                images: images.shuffled())
+        }, onCompletion)
     }
 }

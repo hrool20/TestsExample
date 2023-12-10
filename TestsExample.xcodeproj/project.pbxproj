@@ -27,6 +27,8 @@
 		F37C73432B09A62700FC13B1 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */; };
 		F37C73452B09A8E800FC13B1 /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73442B09A8E800FC13B1 /* DateConstants.swift */; };
 		F37C73472B09ACF400FC13B1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73462B09ACF400FC13B1 /* Date+Extension.swift */; };
+		F382D6902B0B27E100596989 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F382D68F2B0B27E100596989 /* NetworkManager.swift */; };
+		F382D6922B0B294C00596989 /* NetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F382D6912B0B294C00596989 /* NetworkManagerImpl.swift */; };
 		F3B59A352B09BFA900E421BD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A342B09BFA900E421BD /* MainTabBarController.swift */; };
 		F3B59A392B09BFE500E421BD /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A382B09BFE500E421BD /* BaseTabBarController.swift */; };
 		F3B59A3B2B09C0EC00E421BD /* SubscribeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B59A3A2B09C0EC00E421BD /* SubscribeHelper.swift */; };
@@ -166,6 +168,8 @@
 		F37C73422B09A62700FC13B1 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		F37C73442B09A8E800FC13B1 /* DateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConstants.swift; sourceTree = "<group>"; };
 		F37C73462B09ACF400FC13B1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		F382D68F2B0B27E100596989 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F382D6912B0B294C00596989 /* NetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerImpl.swift; sourceTree = "<group>"; };
 		F3B59A342B09BFA900E421BD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		F3B59A382B09BFE500E421BD /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		F3B59A3A2B09C0EC00E421BD /* SubscribeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeHelper.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 				F37C73312B09236900FC13B1 /* DI */,
 				F37C733B2B09376A00FC13B1 /* Entity */,
 				F37C73342B09248D00FC13B1 /* LocalStorage */,
+				F382D68E2B0B27CF00596989 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -369,6 +374,15 @@
 				F37C733C2B09379700FC13B1 /* CodableHelper.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		F382D68E2B0B27CF00596989 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F382D68F2B0B27E100596989 /* NetworkManager.swift */,
+				F382D6912B0B294C00596989 /* NetworkManagerImpl.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F3B59A332B09BF7F00E421BD /* MainTabBar */ = {
@@ -989,8 +1003,8 @@
 		F3F0F28B2B0AE760004FCD05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F3F0F2C42B0B25E8004FCD05 /* Mapper */,
 				F3F0F2932B0AF655004FCD05 /* DataSource */,
+				F3F0F2C42B0B25E8004FCD05 /* Mapper */,
 				F3F0F28C2B0AE79C004FCD05 /* Repository */,
 			);
 			path = Data;
@@ -1419,6 +1433,7 @@
 				F3B59A622B09DDE600E421BD /* ProductDomainMapper.swift in Sources */,
 				F3B59A852B0A8E8B00E421BD /* CouponModule.swift in Sources */,
 				F3B59A9B2B0A942B00E421BD /* FetchCouponsUseCase.swift in Sources */,
+				F382D6922B0B294C00596989 /* NetworkManagerImpl.swift in Sources */,
 				F37C73282B07D80700FC13B1 /* AnyClosureUseCase.swift in Sources */,
 				F37C73382B092D3E00FC13B1 /* KeychainLocalStorage.swift in Sources */,
 				F3B59A642B09DDFC00E421BD /* ProductDomainMapperImpl.swift in Sources */,
@@ -1451,6 +1466,7 @@
 				F3B59A712B09DF9A00E421BD /* ProductRemoteDataSource.swift in Sources */,
 				F3B59A882B0A8EDA00E421BD /* CouponRepository.swift in Sources */,
 				F3B59A7B2B09E07200E421BD /* ProductDataMapperImpl.swift in Sources */,
+				F382D6902B0B27E100596989 /* NetworkManager.swift in Sources */,
 				F3C765E22B071AB3002DDAFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
