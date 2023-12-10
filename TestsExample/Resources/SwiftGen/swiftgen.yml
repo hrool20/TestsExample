@@ -1,6 +1,15 @@
 input_dir: ${SRCROOT}/${TARGET_NAME}/Resources/
 output_dir: ${SRCROOT}/${TARGET_NAME}/Resources/SwiftGen/
 
+fonts:
+  inputs:
+    - Fonts
+  outputs:
+    - templateName: swift5
+      params:
+        enumName: SGFonts
+      output: XCFonts+Generated.swift
+
 xcassets:
   inputs:
     - Assets.xcassets

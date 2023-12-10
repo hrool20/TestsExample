@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		8E60239A2B26723B002C7818 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023992B26723B002C7818 /* swiftgen.yml */; };
 		8E60239F2B267542002C7818 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60239E2B267542002C7818 /* XCAssets+Generated.swift */; };
+		8E6023AB2B2676CD002C7818 /* RethinkSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A12B2676CD002C7818 /* RethinkSans-MediumItalic.ttf */; };
+		8E6023AC2B2676CD002C7818 /* RethinkSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A22B2676CD002C7818 /* RethinkSans-ExtraBoldItalic.ttf */; };
+		8E6023AD2B2676CD002C7818 /* RethinkSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A32B2676CD002C7818 /* RethinkSans-Italic.ttf */; };
+		8E6023AE2B2676CD002C7818 /* RethinkSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A42B2676CD002C7818 /* RethinkSans-BoldItalic.ttf */; };
+		8E6023AF2B2676CD002C7818 /* RethinkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A52B2676CD002C7818 /* RethinkSans-ExtraBold.ttf */; };
+		8E6023B02B2676CD002C7818 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A62B2676CD002C7818 /* RethinkSans-Regular.ttf */; };
+		8E6023B12B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A72B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf */; };
+		8E6023B22B2676CD002C7818 /* RethinkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A82B2676CD002C7818 /* RethinkSans-Bold.ttf */; };
+		8E6023B32B2676CD002C7818 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023A92B2676CD002C7818 /* RethinkSans-Medium.ttf */; };
+		8E6023B42B2676CD002C7818 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */; };
+		8E6023B62B267747002C7818 /* XCFonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6023B52B267747002C7818 /* XCFonts+Generated.swift */; };
 		F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73182B07D32200FC13B1 /* CoreModule.swift */; };
 		F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731A2B07D35900FC13B1 /* BaseModule.swift */; };
 		F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */; };
@@ -152,6 +163,17 @@
 /* Begin PBXFileReference section */
 		8E6023992B26723B002C7818 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		8E60239E2B267542002C7818 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		8E6023A12B2676CD002C7818 /* RethinkSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8E6023A22B2676CD002C7818 /* RethinkSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		8E6023A32B2676CD002C7818 /* RethinkSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Italic.ttf"; sourceTree = "<group>"; };
+		8E6023A42B2676CD002C7818 /* RethinkSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8E6023A52B2676CD002C7818 /* RethinkSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8E6023A62B2676CD002C7818 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
+		8E6023A72B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8E6023A82B2676CD002C7818 /* RethinkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Bold.ttf"; sourceTree = "<group>"; };
+		8E6023A92B2676CD002C7818 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
+		8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		8E6023B52B267747002C7818 /* XCFonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCFonts+Generated.swift"; sourceTree = "<group>"; };
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
@@ -311,8 +333,26 @@
 			children = (
 				8E6023992B26723B002C7818 /* swiftgen.yml */,
 				8E60239E2B267542002C7818 /* XCAssets+Generated.swift */,
+				8E6023B52B267747002C7818 /* XCFonts+Generated.swift */,
 			);
 			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		8E6023A02B2676A8002C7818 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8E6023A82B2676CD002C7818 /* RethinkSans-Bold.ttf */,
+				8E6023A42B2676CD002C7818 /* RethinkSans-BoldItalic.ttf */,
+				8E6023A52B2676CD002C7818 /* RethinkSans-ExtraBold.ttf */,
+				8E6023A22B2676CD002C7818 /* RethinkSans-ExtraBoldItalic.ttf */,
+				8E6023A32B2676CD002C7818 /* RethinkSans-Italic.ttf */,
+				8E6023A92B2676CD002C7818 /* RethinkSans-Medium.ttf */,
+				8E6023A12B2676CD002C7818 /* RethinkSans-MediumItalic.ttf */,
+				8E6023A62B2676CD002C7818 /* RethinkSans-Regular.ttf */,
+				8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */,
+				8E6023A72B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F37C731C2B07D47F00FC13B1 /* DI */ = {
@@ -804,6 +844,7 @@
 		F3C766132B072275002DDAFC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E6023A02B2676A8002C7818 /* Fonts */,
 				8E6023982B26721A002C7818 /* SwiftGen */,
 				F3C765EB2B071AB4002DDAFC /* Assets.xcassets */,
 				F3C765F02B071AB4002DDAFC /* Info.plist */,
@@ -1350,9 +1391,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6023B02B2676CD002C7818 /* RethinkSans-Regular.ttf in Resources */,
+				8E6023AE2B2676CD002C7818 /* RethinkSans-BoldItalic.ttf in Resources */,
+				8E6023AF2B2676CD002C7818 /* RethinkSans-ExtraBold.ttf in Resources */,
+				8E6023B42B2676CD002C7818 /* RethinkSans-SemiBold.ttf in Resources */,
 				F3C765EF2B071AB4002DDAFC /* LaunchScreen.storyboard in Resources */,
 				F3C765EC2B071AB4002DDAFC /* Assets.xcassets in Resources */,
+				8E6023AC2B2676CD002C7818 /* RethinkSans-ExtraBoldItalic.ttf in Resources */,
+				8E6023B32B2676CD002C7818 /* RethinkSans-Medium.ttf in Resources */,
+				8E6023AD2B2676CD002C7818 /* RethinkSans-Italic.ttf in Resources */,
+				8E6023AB2B2676CD002C7818 /* RethinkSans-MediumItalic.ttf in Resources */,
+				8E6023B12B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf in Resources */,
 				8E60239A2B26723B002C7818 /* swiftgen.yml in Resources */,
+				8E6023B22B2676CD002C7818 /* RethinkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1495,6 +1546,7 @@
 				F3B59A8D2B0A8F4900E421BD /* CouponDataMapper.swift in Sources */,
 				F3C7664E2B073D7B002DDAFC /* NotificationCenterWrapper.swift in Sources */,
 				F3B59A352B09BFA900E421BD /* MainTabBarController.swift in Sources */,
+				8E6023B62B267747002C7818 /* XCFonts+Generated.swift in Sources */,
 				F37C733F2B09694500FC13B1 /* MemoryLocalStorage.swift in Sources */,
 				F3B59A5A2B09D65800E421BD /* ProductPresentationMapperImpl.swift in Sources */,
 				F3B59A972B0A90E700E421BD /* CouponRemoteDataSourceImpl.swift in Sources */,
