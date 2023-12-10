@@ -1,0 +1,12 @@
+input_dir: ${SRCROOT}/${TARGET_NAME}/Resources/
+output_dir: ${SRCROOT}/${TARGET_NAME}/Resources/SwiftGen/
+
+xcassets:
+  inputs:
+    - Assets.xcassets
+  outputs:
+    - templateName: swift5
+      params:
+        enumName: SGAsset
+        forceProvidesNamespaces: true
+      output: XCAssets+Generated.swift

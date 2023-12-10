@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E60239A2B26723B002C7818 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8E6023992B26723B002C7818 /* swiftgen.yml */; };
+		8E60239F2B267542002C7818 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60239E2B267542002C7818 /* XCAssets+Generated.swift */; };
 		F37C73192B07D32200FC13B1 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C73182B07D32200FC13B1 /* CoreModule.swift */; };
 		F37C731B2B07D35900FC13B1 /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731A2B07D35900FC13B1 /* BaseModule.swift */; };
 		F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */; };
@@ -148,6 +150,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E6023992B26723B002C7818 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		8E60239E2B267542002C7818 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
@@ -302,6 +306,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E6023982B26721A002C7818 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				8E6023992B26723B002C7818 /* swiftgen.yml */,
+				8E60239E2B267542002C7818 /* XCAssets+Generated.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 		F37C731C2B07D47F00FC13B1 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,6 +804,7 @@
 		F3C766132B072275002DDAFC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E6023982B26721A002C7818 /* SwiftGen */,
 				F3C765EB2B071AB4002DDAFC /* Assets.xcassets */,
 				F3C765F02B071AB4002DDAFC /* Info.plist */,
 				F3C765ED2B071AB4002DDAFC /* LaunchScreen.storyboard */,
@@ -1217,6 +1231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3C766092B071AB5002DDAFC /* Build configuration list for PBXNativeTarget "TestsExample" */;
 			buildPhases = (
+				8E60239D2B267414002C7818 /* SwiftGen */,
 				F3C765D82B071AB3002DDAFC /* Sources */,
 				F3C765D92B071AB3002DDAFC /* Frameworks */,
 				F3C765DA2B071AB3002DDAFC /* Resources */,
@@ -1317,6 +1332,7 @@
 				F3C7662E2B073118002DDAFC /* XCRemoteSwiftPackageReference "Swinject" */,
 				F3B59AB92B0AC62E00E421BD /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F3F0F2862B0AE0FA004FCD05 /* XCRemoteSwiftPackageReference "Cuckoo" */,
+				8E60239C2B267360002C7818 /* XCRemoteSwiftPackageReference "SwiftGen" */,
 			);
 			productRefGroup = F3C765DD2B071AB3002DDAFC /* Products */;
 			projectDirPath = "";
@@ -1336,6 +1352,7 @@
 			files = (
 				F3C765EF2B071AB4002DDAFC /* LaunchScreen.storyboard in Resources */,
 				F3C765EC2B071AB4002DDAFC /* Assets.xcassets in Resources */,
+				8E60239A2B26723B002C7818 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1356,6 +1373,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8E60239D2B267414002C7818 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"SwiftGen starts\"\ncd ${BUILD_DIR%Build/*}SourcePackages/checkouts/SwiftGen\n/usr/bin/xcrun --sdk macosx swift run swiftgen config run --config ${SRCROOT}/${TARGET_NAME}/Resources/SwiftGen/swiftgen.yml\necho \"SwiftGen ends\"\n";
+		};
 		F3F0F2782B0ADD4B004FCD05 /* Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1424,6 +1459,7 @@
 				F3B59A8A2B0A8F2F00E421BD /* CouponRepositoryImpl.swift in Sources */,
 				F37C73262B07D77E00FC13B1 /* CaseResult.swift in Sources */,
 				F37C73412B09730B00FC13B1 /* UITableView+Extension.swift in Sources */,
+				8E60239F2B267542002C7818 /* XCAssets+Generated.swift in Sources */,
 				F37C731E2B07D4A700FC13B1 /* CoreModule+Presentation.swift in Sources */,
 				F37C733A2B0932F500FC13B1 /* UserDefaultsLocalStorage.swift in Sources */,
 				F3C7664B2B073A78002DDAFC /* BehaviorObservable.swift in Sources */,
@@ -1819,6 +1855,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E60239C2B267360002C7818 /* XCRemoteSwiftPackageReference "SwiftGen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftGen/SwiftGen";
+			requirement = {
+				kind = exactVersion;
+				version = 6.6.2;
+			};
+		};
 		F3B59AB92B0AC62E00E421BD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
