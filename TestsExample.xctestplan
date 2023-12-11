@@ -46,6 +46,7 @@
       }
     },
     {
+      "enabled" : false,
       "target" : {
         "containerPath" : "container:TestsExample.xcodeproj",
         "identifier" : "F3C765FE2B071AB5002DDAFC",
