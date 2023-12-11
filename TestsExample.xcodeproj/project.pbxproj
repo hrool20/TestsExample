@@ -176,6 +176,8 @@
 		8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		8E6023B52B267747002C7818 /* XCFonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCFonts+Generated.swift"; sourceTree = "<group>"; };
 		8E6023B72B267A43002C7818 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		8EAD42E92B268E74001177EE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8EAD42EA2B268E74001177EE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
@@ -782,6 +784,8 @@
 		F3C765D32B071AB3002DDAFC = {
 			isa = PBXGroup;
 			children = (
+				8EAD42E92B268E74001177EE /* .gitignore */,
+				8EAD42EA2B268E74001177EE /* .swiftlint.yml */,
 				F3F0F2732B0ADA79004FCD05 /* TestsExample.xctestplan */,
 				F3C765DE2B071AB3002DDAFC /* TestsExample */,
 				F3C765F82B071AB5002DDAFC /* TestsExampleTests */,
@@ -1283,6 +1287,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8E6023C02B268842002C7818 /* PBXTargetDependency */,
 			);
 			name = TestsExample;
 			packageProductDependencies = (
@@ -1378,6 +1383,7 @@
 				F3B59AB92B0AC62E00E421BD /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F3F0F2862B0AE0FA004FCD05 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 				8E60239C2B267360002C7818 /* XCRemoteSwiftPackageReference "SwiftGen" */,
+				8E6023BD2B268635002C7818 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = F3C765DD2B071AB3002DDAFC /* Products */;
 			projectDirPath = "";
@@ -1431,6 +1437,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8E60239D2B267414002C7818 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1604,6 +1611,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8E6023C02B268842002C7818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8E6023BF2B268842002C7818 /* SwiftLintPlugin */;
+		};
 		F3C765F72B071AB5002DDAFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F3C765DB2B071AB3002DDAFC /* TestsExample */;
@@ -1922,6 +1933,14 @@
 				version = 6.6.2;
 			};
 		};
+		8E6023BD2B268635002C7818 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = exactVersion;
+				version = 0.54.0;
+			};
+		};
 		F3B59AB92B0AC62E00E421BD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -1957,6 +1976,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E6023BF2B268842002C7818 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6023BD2B268635002C7818 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
 		F3B59ABA2B0AC62E00E421BD /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3B59AB92B0AC62E00E421BD /* XCRemoteSwiftPackageReference "RxSwift" */;

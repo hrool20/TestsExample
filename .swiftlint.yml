@@ -1,0 +1,4 @@
+disabled_rules:
+  - blanket_disable_command
+  - identifier_name
+reporter: "xcode"
