@@ -1456,6 +1456,7 @@
 		};
 		F3F0F2782B0ADD4B004FCD05 /* Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
