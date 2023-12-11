@@ -10,7 +10,7 @@ import UIKit
 
 final class MainControllerProvider {
     private let container: Container
-    
+
     init(_ container: Container) {
         self.container = container
     }

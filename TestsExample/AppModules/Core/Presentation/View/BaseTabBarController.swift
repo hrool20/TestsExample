@@ -27,13 +27,9 @@ class BaseTabBarController<V: BaseViewModel>: UITabBarController, BaseController
         super.init(nibName: nil, bundle: nil)
         coordinator.viewController = self
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 
     func showLoading(_ value: Bool) {

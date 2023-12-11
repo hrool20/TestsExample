@@ -21,7 +21,7 @@ extension UseCase {
         execute(())
     }
 
-    func execute() -> CaseResult<ResultType, ErrorType> where RequestType == Optional<Void> {
+    func execute() -> CaseResult<ResultType, ErrorType> where RequestType == Void? {
         execute(nil)
     }
 }

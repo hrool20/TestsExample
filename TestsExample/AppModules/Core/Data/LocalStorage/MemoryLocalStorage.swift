@@ -16,13 +16,13 @@ final class MemoryLocalStorage: LocalStorage {
         dict = .init()
     }
 
-    func save<T>(_ value: T?, key: String) where T : Encodable {
+    func save<T>(_ value: T?, key: String) where T: Encodable {
         sync {
             dict[key] = value
         }
     }
 
-    func load<T>(key: String) -> T? where T : Decodable {
+    func load<T>(key: String) -> T? where T: Decodable {
         sync {
             dict[key] as? T
         }

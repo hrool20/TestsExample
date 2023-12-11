@@ -15,7 +15,7 @@ protocol BaseModuleProtocol {
 
 class BaseModuleEntity {
     let container: Container
-    
+
     init(_ container: Container) {
         self.container = container
     }

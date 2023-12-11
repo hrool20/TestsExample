@@ -27,7 +27,7 @@ extension ClosureUseCase {
 
     func execute(
         _ onCompletion: @escaping (CaseResult<ResultType, ErrorType>) -> Void
-    ) where RequestType == Optional<Void> {
+    ) where RequestType == Void? {
         execute(nil, onCompletion)
     }
 }

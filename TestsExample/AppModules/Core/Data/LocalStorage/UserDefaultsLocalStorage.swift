@@ -10,13 +10,13 @@ import Foundation
 final class UserDefaultsLocalStorage: LocalStorage {
     private let codableHelper: CodableHelper
     private let userDefaults: UserDefaults
-    
+
     init(codableHelper: CodableHelper) {
         self.codableHelper = codableHelper
         userDefaults = .standard
     }
 
-    func save<T>(_ value: T?, key: String) where T : Encodable {
+    func save<T>(_ value: T?, key: String) where T: Encodable {
         switch value.self {
         case let aux as String:
             userDefaults.set(aux, forKey: key)
@@ -36,7 +36,7 @@ final class UserDefaultsLocalStorage: LocalStorage {
         }
     }
 
-    func load<T>(key: String) -> T? where T : Decodable {
+    func load<T>(key: String) -> T? where T: Decodable {
         if let value = userDefaults.value(forKey: key) as? T {
             return value
         }

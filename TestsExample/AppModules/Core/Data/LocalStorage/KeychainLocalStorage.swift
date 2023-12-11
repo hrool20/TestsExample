@@ -8,7 +8,7 @@
 import Foundation
 
 final class KeychainLocalStorage: LocalStorage {
-    func save<T>(_ value: T?, key: String) where T : Encodable {
+    func save<T>(_ value: T?, key: String) where T: Encodable {
         guard let newData = map(value: value) else { return }
         var query = query(forKey: key)
         if contains(key: key) {
@@ -19,7 +19,7 @@ final class KeychainLocalStorage: LocalStorage {
         }
     }
 
-    func load<T>(key: String) -> T? where T : Decodable {
+    func load<T>(key: String) -> T? where T: Decodable {
         map(data: loadValue(key: key))
     }
 
@@ -60,7 +60,7 @@ private extension KeychainLocalStorage {
         var keychainItem: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &keychainItem)
         guard status != errSecItemNotFound else { return nil }
-        let item = keychainItem as? [String : Any]
+        let item = keychainItem as? [String: Any]
         guard let data = item?[kSecValueData as String] as? Data else { return nil }
         return data
     }
