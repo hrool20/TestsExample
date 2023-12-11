@@ -178,6 +178,7 @@
 		8E6023B72B267A43002C7818 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8EAD42E92B268E74001177EE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8EAD42EA2B268E74001177EE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8EF8F47A2B26B9CC0060ABBD /* build-and-test-develop.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "build-and-test-develop.yml"; sourceTree = "<group>"; };
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		F37C731D2B07D4A700FC13B1 /* CoreModule+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreModule+Presentation.swift"; sourceTree = "<group>"; };
@@ -357,6 +358,22 @@
 				8E6023A72B2676CD002C7818 /* RethinkSans-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8EF8F4782B26B9CC0060ABBD /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				8EF8F4792B26B9CC0060ABBD /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		8EF8F4792B26B9CC0060ABBD /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				8EF8F47A2B26B9CC0060ABBD /* build-and-test-develop.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 		F37C731C2B07D47F00FC13B1 /* DI */ = {
@@ -784,6 +801,7 @@
 		F3C765D32B071AB3002DDAFC = {
 			isa = PBXGroup;
 			children = (
+				8EF8F4782B26B9CC0060ABBD /* .github */,
 				8EAD42E92B268E74001177EE /* .gitignore */,
 				8EAD42EA2B268E74001177EE /* .swiftlint.yml */,
 				F3F0F2732B0ADA79004FCD05 /* TestsExample.xctestplan */,
