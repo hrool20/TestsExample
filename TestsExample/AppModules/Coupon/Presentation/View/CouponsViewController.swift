@@ -106,11 +106,17 @@ final class CouponsViewController: BaseViewController<CouponsViewModel> {
 
     // MARK: - UICollectionViewDelegate & UICollectionViewDataSource
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
         viewModel.items?.count ?? .zero
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(indexPath) as CouponCollectionViewCell
         cell.item = viewModel.items?[indexPath.row]
         return cell

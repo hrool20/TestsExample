@@ -32,10 +32,6 @@ class BaseViewController<V: BaseViewModel>: UIViewController, BaseController, Su
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     func showLoading(_ value: Bool) {
     }
 
