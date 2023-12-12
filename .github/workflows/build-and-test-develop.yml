@@ -42,7 +42,7 @@ jobs:
           echo "scheme saved: ${scheme}"
           echo "file parameter: ${filetype_parameter}"
           echo "file to build: ${file_to_build}"
-          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator -destination "platform=$platform,name=$device"
       - name: Test
         env:
           scheme: ${{ 'default' }}
