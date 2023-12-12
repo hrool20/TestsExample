@@ -43,7 +43,9 @@ jobs:
           echo "scheme saved: ${scheme}"
           echo "file parameter: ${filetype_parameter}"
           echo "file to build: ${file_to_build}"
+          sudo xcode-select -p
           sudo xcode-select -switch /Applications/Xcode.app
+          sudo xcode-select -p
           xcodebuild -"$filetype_parameter" "$file_to_build" -scheme "$scheme" -sdk iphonesimulator -destination "platform=$platform,name=$device" clean build test
       - name: Test
         env:
