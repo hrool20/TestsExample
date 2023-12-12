@@ -18,9 +18,9 @@ jobs:
           swift -version
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Select Xcode
+      - name: List availables devices
         run: |
-          sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
+          xcrun simctl list devicetypes
       - name: Set default scheme
         run: |
           scheme_list=$(xcodebuild -list -json -verbose | tr -d "\n")
@@ -41,7 +41,7 @@ jobs:
           echo "scheme saved: ${scheme}"
           echo "file parameter: ${filetype_parameter}"
           echo "file to build: ${file_to_build}"
-          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device" -derivedDataPath DerivedData
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
       - name: Test
         env:
           scheme: ${{ 'default' }}
