@@ -22,6 +22,7 @@ jobs:
         run: |
           xcrun simctl list devicetypes
           xcodebuild -downloadPlatform iOS Simulator
+          ls /Applications
       - name: Set default scheme
         run: |
           scheme_list=$(xcodebuild -list -json -verbose | tr -d "\n")
