@@ -39,10 +39,9 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           echo "simulator saved: ${device}"
           echo "scheme saved: ${scheme}"
-          echo "scheme default: ${default}"
           echo "file parameter: ${filetype_parameter}"
           echo "file to build: ${file_to_build}"
-          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device" -derivedDataPath DerivedData
       - name: Test
         env:
           scheme: ${{ 'default' }}
