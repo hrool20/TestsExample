@@ -40,8 +40,9 @@ jobs:
         name: Clean app
         run: |
           ls
-          echo `ls -A | grep -i \\.xcworkspace\$`
-          xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
+          cd /Users/runner/Library/Developer/Xcode/DerivedData/
+          ls
+#          xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
 #      - id: id3
 #        name: Build app
 #        run: |
