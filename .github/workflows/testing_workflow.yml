@@ -9,11 +9,11 @@ jobs:
     runs-on: macos-latest
     env:
       derivedDataPath: /Users/runner/Library/Developer/Xcode/DerivedData/TestsExample**
-      device: iPhone 11 Pro
-      file_key: ${{ steps.2.file_key }}
-      file_value: ${{ steps.2.file_value }}
-      platform: iOS Simulator
-      scheme: TestsExample
+      device: "iPhone 11 Pro"
+      file_key: ""
+      file_value: ""
+      platform: "iOS Simulator"
+      scheme: "TestsExample"
     steps:
       - id: 1
         name: Checkout
