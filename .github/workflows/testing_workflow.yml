@@ -47,4 +47,6 @@ jobs:
       - id: id4
         name: Test app
         run: |
-          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
+          ls
+          echo `ls -A | grep -i \\.xcworkspace\$`
+#          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
