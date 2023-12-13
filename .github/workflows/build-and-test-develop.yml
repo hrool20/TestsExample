@@ -18,11 +18,11 @@ jobs:
           swift -version
       - name: Checkout
         uses: actions/checkout@v3
-      - name: List availables devices
+      - name: Cahnge Xcode
         run: |
-          xcrun simctl list devicetypes
-          xcodebuild -downloadPlatform iOS Simulator
-          ls /Applications
+          sudo xcode-select -p
+          sudo xcode-select -s /Applications/Xcode.app
+          sudo xcode-select -p
       - name: Set default scheme
         run: |
           scheme_list=$(xcodebuild -list -json -verbose | tr -d "\n")
@@ -43,9 +43,6 @@ jobs:
           echo "scheme saved: ${scheme}"
           echo "file parameter: ${filetype_parameter}"
           echo "file to build: ${file_to_build}"
-          sudo xcode-select -p
-          sudo xcode-select -switch /Applications/Xcode.app
-          sudo xcode-select -p
           xcodebuild -"$filetype_parameter" "$file_to_build" -scheme "$scheme" -sdk iphonesimulator -destination "platform=$platform,name=$device" clean build test
       - name: Test
         env:
