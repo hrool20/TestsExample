@@ -17,7 +17,7 @@ jobs:
       - id: id2
         run: |
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then file_key="workspace" && file_value="`ls -A | grep -i \\.xcworkspace\$`"; else file_key="project" && file_value="`ls -A | grep -i \\.xcodeproj\$`"; fi
-          $file_value=`echo $file_to_build | awk '{$1=$1;print}'`
+          $file_value=`echo $file_value | awk '{$1=$1;print}'`
           echo "file_key" >> $GITHUB_OUTPUT
           echo "file_value" >> $GITHUB_OUTPUT
 
