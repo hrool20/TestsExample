@@ -18,10 +18,11 @@ jobs:
           swift -version
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cahnge Xcode
+      - name: Change Xcode
         run: |
+          ls /Applications
           sudo xcode-select -p
-          sudo xcode-select -s /Applications/Xcode.app
+          sudo xcode-select -s /Applications/Xcode_13.4.app
           sudo xcode-select -p
       - name: Set default scheme
         run: |
