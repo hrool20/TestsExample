@@ -15,23 +15,23 @@ jobs:
       platform: "iOS Simulator"
       scheme: "TestsExample"
     steps:
-      - id: 1
+      - id: "1"
         name: Checkout
         uses: actions/checkout@v3
-      - id: 2
+      - id: "2"
         name: Set File variables
         run: |
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then $file_key="workspace" && $file_value="`ls -A | grep -i \\.xcworkspace\$`"; else $file_key="project" && $file_value="`ls -A | grep -i \\.xcodeproj\$`"; fi
           $file_value=`echo $file_to_build | awk '{$1=$1;print}'`
-      - id: 3
+      - id: "3"
         name: Clean app
         run: |
           xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
-      - id: 4
+      - id: "4"
         name: Build app
         run: |
           xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath
-      - id: 5
+      - id: "5"
         name: Test app
         run: |
           xcodebuild test-without-building -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun
