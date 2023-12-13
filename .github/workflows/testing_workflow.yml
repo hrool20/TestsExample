@@ -10,8 +10,8 @@ jobs:
     env:
       derivedDataPath: /Users/runner/Library/Developer/Xcode/DerivedData/TestsExample**
       device: "iPhone 11 Pro"
-      file_key: ${{ steps.id2.file_key }}
-      file_value: ${{ steps.id2.file_value }}
+      file_key: ${{ steps.id2.outputs.file_key }}
+      file_value: ${{ steps.id2.outputs.file_value }}
       platform: "iOS Simulator"
       scheme: "TestsExample"
     steps:
