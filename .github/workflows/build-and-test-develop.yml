@@ -16,14 +16,21 @@ jobs:
         run: |
           /usr/bin/xcodebuild -version
           swift -version
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Change Xcode
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#      - name: Change Xcode
+#        run: |
+#          ls /Applications
+#          sudo xcode-select -p
+#          sudo xcode-select -s /Applications/Xcode_14.1.app
+#          sudo xcode-select -p
+      - name: Prepare iOS 14 simulator
         run: |
-          ls /Applications
-          sudo xcode-select -p
-          sudo xcode-select -s /Applications/Xcode_14.1.app
-          sudo xcode-select -p
+          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
+          sudo ln -s /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 14.4.simruntime
+          xcrun simctl list runtimes
+          xcrun simctl create custom-test-device "ihone 11" "com.apple.CoreSimulator.SimRuntime.iOS-14-4"
+          xcrun simctl list devices 14.4
 #      - name: Set default scheme
 #        run: |
 #          scheme_list=$(xcodebuild -list -json -verbose | tr -d "\n")
