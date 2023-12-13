@@ -40,7 +40,7 @@ jobs:
         name: Clean app
         run: |
           ls
-          cd /Users/runner/Library/Developer/Xcode
+          cd /Users/runner/Library/Developer
           ls
 #          xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
 #      - id: id3
