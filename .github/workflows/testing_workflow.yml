@@ -10,8 +10,8 @@ jobs:
     env:
       derivedDataPath: /Users/runner/Library/Developer/Xcode/DerivedData/TestsExample**
       device: "iPhone 11 Pro"
-      file_key: ""
-      file_value: ""
+      file_key: ${{ steps.id2.file_key }}
+      file_value: ${{ steps.id2.file_value }}
       platform: "iOS Simulator"
       scheme: "TestsExample"
     steps:
@@ -21,8 +21,10 @@ jobs:
       - id: id2
         name: Set File variables
         run: |
-          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then $file_key="workspace" && $file_value="`ls -A | grep -i \\.xcworkspace\$`"; else $file_key="project" && $file_value="`ls -A | grep -i \\.xcodeproj\$`"; fi
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then file_key="workspace" && file_value="`ls -A | grep -i \\.xcworkspace\$`"; else file_key="project" && file_value="`ls -A | grep -i \\.xcodeproj\$`"; fi
           $file_value=`echo $file_to_build | awk '{$1=$1;print}'`
+          echo "file_key" >> $GITHUB_OUTPUT
+          echo "file_value" >> $GITHUB_OUTPUT
       - id: id3
         name: Clean app
         run: |
