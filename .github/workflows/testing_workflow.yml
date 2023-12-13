@@ -4,36 +4,47 @@ on:
   pull_request:
 
 jobs:
-  main:
-    name: "Clean, Build and Test all schemes"
+  set_file_variables:
+    name: "Set File variables"
     runs-on: macos-latest
-    env:
-      derivedDataPath: /Users/runner/Library/Developer/Xcode/DerivedData/TestsExample**
-      device: "iPhone 11 Pro"
+    outputs:
       file_key: ${{ steps.id2.outputs.file_key }}
       file_value: ${{ steps.id2.outputs.file_value }}
-      platform: "iOS Simulator"
-      scheme: "TestsExample"
     steps:
       - id: id1
-        name: Checkout
+        name: "Checkout"
         uses: actions/checkout@v3
       - id: id2
-        name: Set File variables
         run: |
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then file_key="workspace" && file_value="`ls -A | grep -i \\.xcworkspace\$`"; else file_key="project" && file_value="`ls -A | grep -i \\.xcodeproj\$`"; fi
           $file_value=`echo $file_to_build | awk '{$1=$1;print}'`
           echo "file_key" >> $GITHUB_OUTPUT
           echo "file_value" >> $GITHUB_OUTPUT
-      - id: id3
+
+  main:
+    name: "Clean, Build and Test all schemes"
+    runs-on: macos-latest
+    needs: set_file_variables
+    env:
+      derivedDataPath: "/Users/runner/Library/Developer/Xcode/DerivedData/TestsExample**"
+      device: "iPhone 11 Pro"
+      file_key: ${{ needs.set_file_variables.outputs.file_key }}
+      file_value: ${{ needs.set_file_variables.outputs.file_value }}
+      platform: "iOS Simulator"
+      scheme: "TestsExample"
+    steps:
+      - id: id1
+        name: "Checkout"
+        uses: actions/checkout@v3
+      - id: id2
         name: Clean app
         run: |
           xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
-      - id: id4
+      - id: id3
         name: Build app
         run: |
           xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath
-      - id: id5
+      - id: id4
         name: Test app
         run: |
           xcodebuild test-without-building -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun
