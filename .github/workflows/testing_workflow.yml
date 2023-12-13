@@ -39,15 +39,14 @@ jobs:
       - id: id2
         name: Clean app
         run: |
-          ls
+          xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
+      - id: id3
+        name: Build app
+        run: |
+          xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath -quiet
+      - id: id4
+        name: Test app
+        run: |
           cd /Users/runner/Library/Developer
           ls
-#          xcodebuild clean -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device"
-#      - id: id3
-#        name: Build app
-#        run: |
-#          xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath -quiet
-#      - id: id4
-#        name: Test app
-#        run: |
-#          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
+          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
