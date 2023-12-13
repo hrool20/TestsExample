@@ -43,8 +43,8 @@ jobs:
       - id: id3
         name: Build app
         run: |
-          xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath
+          xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath -quiet
       - id: id4
         name: Test app
         run: |
-          xcodebuild test-without-building -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun
+          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
