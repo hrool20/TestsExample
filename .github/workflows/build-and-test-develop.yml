@@ -24,13 +24,13 @@ jobs:
 #          sudo xcode-select -p
 #          sudo xcode-select -s /Applications/Xcode_14.1.app
 #          sudo xcode-select -p
-      - name: Prepare iOS 16 simulator
-        run: |
-          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
-          sudo ln -s /Applications/Xcode_14.2.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 16.2.simruntime
-          xcrun simctl list runtimes
-          xcrun simctl create custom-test-device "iPhone 11" "com.apple.CoreSimulator.SimRuntime.iOS-16-2"
-          xcrun simctl list devices 16.2
+#      - name: Prepare iOS 16 simulator
+#        run: |
+#          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
+#          sudo ln -s /Applications/Xcode_14.2.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 16.2.simruntime
+#          xcrun simctl list runtimes
+#          xcrun simctl create custom-test-device "iPhone 11" "com.apple.CoreSimulator.SimRuntime.iOS-16-2"
+#          xcrun simctl list devices 16.2
 #      - name: Set default scheme
 #        run: |
 #          scheme_list=$(xcodebuild -list -json -verbose | tr -d "\n")
@@ -51,7 +51,7 @@ jobs:
           echo "scheme saved: ${scheme}"
           echo "file parameter: ${filetype_parameter}"
           echo "file to build: ${file_to_build}"
-          xcodebuild -"$filetype_parameter" "$file_to_build" -scheme "$scheme" -sdk iphonesimulator -destination "platform=$platform,name=$device" -showdestinations clean build
+          xcodebuild -"$filetype_parameter" "$file_to_build" -scheme "$scheme" -destination "platform=$platform,name=$device" clean build-for-testing
       - name: Test
         env:
           scheme: ${{ 'default' }}
