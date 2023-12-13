@@ -2,9 +2,9 @@ name: Build and test app
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "lllllll" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "lllllll" ]
 
 jobs:
   build:

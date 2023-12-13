@@ -176,8 +176,9 @@
 		8E6023AA2B2676CD002C7818 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		8E6023B52B267747002C7818 /* XCFonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCFonts+Generated.swift"; sourceTree = "<group>"; };
 		8E6023B72B267A43002C7818 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		8E96FED92B2975440025AF22 /* testing_workflow.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = testing_workflow.yml; sourceTree = "<group>"; };
 		8EAD42E92B268E74001177EE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		8EAD42EA2B268E74001177EE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8EAD42EA2B268E74001177EE /* .swiftlint.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; tabWidth = 2; };
 		8EF8F47A2B26B9CC0060ABBD /* build-and-test-develop.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "build-and-test-develop.yml"; sourceTree = "<group>"; };
 		F37C73182B07D32200FC13B1 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
 		F37C731A2B07D35900FC13B1 /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
@@ -365,13 +366,16 @@
 			children = (
 				8EF8F4792B26B9CC0060ABBD /* workflows */,
 			);
+			indentWidth = 2;
 			path = .github;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		8EF8F4792B26B9CC0060ABBD /* workflows */ = {
 			isa = PBXGroup;
 			children = (
 				8EF8F47A2B26B9CC0060ABBD /* build-and-test-develop.yml */,
+				8E96FED92B2975440025AF22 /* testing_workflow.yml */,
 			);
 			path = workflows;
 			sourceTree = "<group>";
