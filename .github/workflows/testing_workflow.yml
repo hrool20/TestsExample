@@ -56,9 +56,9 @@ jobs:
           cd /Users/runner/Library/Developer/Xcode/DerivedData
           ls
           echo "++++"
-          path_name = ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'testsExample'
-          test_name = ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build | grep -i '\.xctestrun'
-          echo path_name
-          echo test_name
+          path_name = ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'testsExample' | awk '{$1=$1;print}'`
+          test_name = ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build | grep -i '\.xctestrun' | awk '{$1=$1;print}'`
+          echo $path_name
+          echo $test_name
           echo "++++"
           xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
