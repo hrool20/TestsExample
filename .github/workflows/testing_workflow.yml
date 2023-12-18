@@ -47,21 +47,6 @@ jobs:
       - id: id4
         name: Test app
         run: |
-          ls /Users/runner/Library/Developer
-          echo "++++"
-          ls /Users/runner/Library/Developer/Xcode
-          echo "++++"
-          ls /Users/runner/Library/Developer/Xcode/DerivedData
-          echo "++++"
           path_name=`ls $derivedDataPath | grep -i 'TestsExample' | awk '{$1=$1;print}'`
-          ls $derivedDataPath/$path_name
-          echo "++++"
-          ls $derivedDataPath/$path_name/Build
-          echo "++++"
-          ls $derivedDataPath/$path_name/Build/Products
-          echo "++++"
           test_name=`ls $derivedDataPath/$path_name/Build/Products | grep -i '\\.xctestrun' | awk '{$1=$1;print}'`
-          echo $path_name
-          echo $test_name
-          echo "++++"
           xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/$path_name/Build/Products/$test_name -quiet
