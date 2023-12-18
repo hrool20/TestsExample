@@ -26,7 +26,7 @@ jobs:
     runs-on: macos-latest
     needs: set_file_variables
     env:
-      derivedDataPath: "/Users/runner/Library/Developer/Xcode/DerivedData/TestsExample**"
+      derivedDataPath: "/Users/runner/Library/Developer/Xcode/DerivedData"
       device: "iPhone 11 Pro"
       file_key: ${{ needs.set_file_variables.outputs.file_key }}
       file_value: ${{ needs.set_file_variables.outputs.file_value }}
@@ -43,7 +43,7 @@ jobs:
       - id: id3
         name: Build app
         run: |
-          xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -derivedDataPath $derivedDataPath -quiet
+          xcodebuild build-for-testing -scheme "$scheme" -"$file_key" "$file_value" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -quiet
       - id: id4
         name: Test app
         run: |
@@ -53,15 +53,15 @@ jobs:
           echo "++++"
           ls /Users/runner/Library/Developer/Xcode/DerivedData
           echo "++++"
-          path_name=`ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'TestsExample' | awk '{$1=$1;print}'`
-          ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name
+          path_name=`ls $derivedDataPath | grep -i 'TestsExample' | awk '{$1=$1;print}'`
+          ls $derivedDataPath/$path_name
           echo "++++"
-          ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build
+          ls $derivedDataPath/$path_name/Build
           echo "++++"
-          ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build/Products
+          ls $derivedDataPath/$path_name/Build/Products
           echo "++++"
-          test_name=`ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build/Products | grep -i '\\.xctestrun' | awk '{$1=$1;print}'`
+          test_name=`ls $derivedDataPath/$path_name/Build/Products | grep -i '\\.xctestrun' | awk '{$1=$1;print}'`
           echo $path_name
           echo $test_name
           echo "++++"
-          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
+          xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/$path_name/Build/Products/$test_name -quiet
