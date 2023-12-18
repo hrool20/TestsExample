@@ -56,8 +56,8 @@ jobs:
           cd /Users/runner/Library/Developer/Xcode/DerivedData
           ls
           echo "++++"
-          path_name="`ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'TestsExample' | awk '{$1=$1;print}'`"
-          test_name="`ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build | grep -i '\.xctestrun' | awk '{$1=$1;print}'`"
+          path_name=ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'TestsExample' | awk '{$1=$1;print}'
+          test_name=ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build | grep -i '\.xctestrun' | awk '{$1=$1;print}'
           echo $path_name
           echo $test_name
           echo "++++"
