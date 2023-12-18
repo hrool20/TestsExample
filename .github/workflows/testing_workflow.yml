@@ -47,6 +47,6 @@ jobs:
       - id: id4
         name: Test app
         run: |
-          path_name=`ls $derivedDataPath | grep -i 'TestsExample' | awk '{$1=$1;print}'`
+          path_name=`ls $derivedDataPath | grep -i '$scheme' | awk '{$1=$1;print}'`
           test_name=`ls $derivedDataPath/$path_name/Build/Products | grep -i '\\.xctestrun' | awk '{$1=$1;print}'`
           xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/$path_name/Build/Products/$test_name -quiet
