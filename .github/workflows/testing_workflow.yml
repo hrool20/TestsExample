@@ -47,17 +47,16 @@ jobs:
       - id: id4
         name: Test app
         run: |
-          cd /Users/runner/Library/Developer
-          ls
+          ls /Users/runner/Library/Developer
           echo "++++"
-          cd /Users/runner/Library/Developer/Xcode
-          ls
+          ls /Users/runner/Library/Developer/Xcode
           echo "++++"
-          cd /Users/runner/Library/Developer/Xcode/DerivedData
-          ls
+          ls /Users/runner/Library/Developer/Xcode/DerivedData
           echo "++++"
-          path_name=ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'TestsExample' | awk '{$1=$1;print}'
-          test_name=ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build | grep -i '\.xctestrun' | awk '{$1=$1;print}'
+          path_name=`ls /Users/runner/Library/Developer/Xcode/DerivedData | grep -i 'TestsExample' | awk '{$1=$1;print}'`
+          ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name
+          echo "++++"
+          test_name=`ls /Users/runner/Library/Developer/Xcode/DerivedData/$path_name/Build | grep -i '\.xctestrun' | awk '{$1=$1;print}'`
           echo $path_name
           echo $test_name
           echo "++++"
