@@ -50,10 +50,10 @@ jobs:
           cd /Users/runner/Library/Developer
           ls
           echo "++++"
-          cd /Xcode
+          cd /Users/runner/Library/Developer/Xcode
           ls
           echo "++++"
-          cd DerivedData
+          cd /Users/runner/Library/Developer/Xcode/DerivedData
           ls
           echo "++++"
           xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
