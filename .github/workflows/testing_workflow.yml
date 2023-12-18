@@ -49,4 +49,11 @@ jobs:
         run: |
           cd /Users/runner/Library/Developer
           ls
+          echo "++++"
+          cd /Xcode
+          ls
+          echo "++++"
+          cd DerivedData
+          ls
+          echo "++++"
           xcodebuild test-without-building -destination "platform=$platform,name=$device" -skipPackagePluginValidation -xctestrun $derivedDataPath/Build/**.xctestrun -quiet
